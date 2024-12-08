@@ -7,9 +7,10 @@ public class Cliente {
     private String direccion;
     private String telefono;
     private String email;
+    private String curp;
     private String fecha_nac;
 
-    public Cliente(int clienteID, String nombres, String apellidos, String direccion, String telefono, String email, String fecha_nac) {
+    public Cliente(int clienteID, String nombres, String apellidos, String direccion, String telefono, String email, String fecha_nac, String curp) {
         this.clienteID = clienteID;
         this.nombres = nombres;
         this.apellidos = apellidos;
@@ -17,6 +18,7 @@ public class Cliente {
         this.telefono = telefono;
         this.email = email;
         this.fecha_nac = fecha_nac;
+        this.curp = curp;
     }
 
     public int getClienteID() {
