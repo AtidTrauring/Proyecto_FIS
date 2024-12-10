@@ -8,12 +8,12 @@ package in;
  *
  * @author ADMIN
  */
-public class hipotecaCredito extends javax.swing.JPanel {
+public class credito extends javax.swing.JPanel {
 
     /**
      * Creates new form hipotecaCredito
      */
-    public hipotecaCredito() {
+    public credito() {
         initComponents();
     }
 
@@ -50,7 +50,7 @@ public class hipotecaCredito extends javax.swing.JPanel {
 
         jLPrestamo.setFont(new java.awt.Font("Dubai", 0, 14)); // NOI18N
         jLPrestamo.setForeground(new java.awt.Color(204, 204, 204));
-        jLPrestamo.setText("jLCredito o hipoteca");
+        jLPrestamo.setText("Creditos");
 
         jLInstruccionCre.setFont(new java.awt.Font("Dubai", 0, 14)); // NOI18N
         jLInstruccionCre.setForeground(new java.awt.Color(255, 255, 255));

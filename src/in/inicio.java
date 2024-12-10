@@ -35,7 +35,6 @@ public class inicio extends javax.swing.JPanel {
         jBSacar = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         jBSolcredito = new javax.swing.JButton();
-        jBSolHipoteca = new javax.swing.JButton();
         jBCerrarSesion = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(28, 58, 70));
@@ -89,7 +88,7 @@ public class inicio extends javax.swing.JPanel {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addComponent(jBingEfectivo, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 33, Short.MAX_VALUE)
                 .addComponent(JBTransferir, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(67, 67, 67)
@@ -115,27 +114,19 @@ public class inicio extends javax.swing.JPanel {
         jBSolcredito.setFont(new java.awt.Font("Dubai", 0, 12)); // NOI18N
         jBSolcredito.setText("Solicitar credito");
 
-        jBSolHipoteca.setBackground(new java.awt.Color(0, 51, 51));
-        jBSolHipoteca.setFont(new java.awt.Font("Dubai", 0, 12)); // NOI18N
-        jBSolHipoteca.setText("Solicitar hipoteca");
-
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(8, 8, 8)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jBSolcredito, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jBSolHipoteca)
-                .addGap(0, 10, Short.MAX_VALUE))
+                .addGap(72, 72, 72))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jBSolcredito)
-                    .addComponent(jBSolHipoteca))
+                .addComponent(jBSolcredito)
                 .addGap(0, 8, Short.MAX_VALUE))
         );
 
@@ -184,7 +175,6 @@ public class inicio extends javax.swing.JPanel {
     private javax.swing.JButton JBTransferir;
     private javax.swing.JButton jBCerrarSesion;
     private javax.swing.JButton jBSacar;
-    private javax.swing.JButton jBSolHipoteca;
     private javax.swing.JButton jBSolcredito;
     private javax.swing.JButton jBingEfectivo;
     private javax.swing.JLabel jLSaldo;

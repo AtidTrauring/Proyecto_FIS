@@ -29,13 +29,13 @@ public class registro extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
+        jLNombre = new javax.swing.JLabel();
+        jLApellidos = new javax.swing.JLabel();
+        jLCorreo = new javax.swing.JLabel();
+        jLConCorreo = new javax.swing.JLabel();
+        jLNacimiento = new javax.swing.JLabel();
+        jLTelefono = new javax.swing.JLabel();
+        jLPassword = new javax.swing.JLabel();
         jTFNombre = new javax.swing.JTextField();
         jTFApellidos = new javax.swing.JTextField();
         jTFEmail = new javax.swing.JTextField();
@@ -58,33 +58,33 @@ public class registro extends javax.swing.JFrame {
         jLabel1.setForeground(new java.awt.Color(204, 204, 204));
         jLabel1.setText("Ingrese los datos que a continuacion se solicitan:");
 
-        jLabel3.setFont(new java.awt.Font("Dubai", 0, 14)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(204, 204, 204));
-        jLabel3.setText("Nombre (s):");
+        jLNombre.setFont(new java.awt.Font("Dubai", 0, 14)); // NOI18N
+        jLNombre.setForeground(new java.awt.Color(204, 204, 204));
+        jLNombre.setText("Nombre (s):");
 
-        jLabel4.setFont(new java.awt.Font("Dubai", 0, 14)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(204, 204, 204));
-        jLabel4.setText("Apellidos:");
+        jLApellidos.setFont(new java.awt.Font("Dubai", 0, 14)); // NOI18N
+        jLApellidos.setForeground(new java.awt.Color(204, 204, 204));
+        jLApellidos.setText("Apellidos:");
 
-        jLabel5.setFont(new java.awt.Font("Dubai", 0, 14)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(204, 204, 204));
-        jLabel5.setText("Email:");
+        jLCorreo.setFont(new java.awt.Font("Dubai", 0, 14)); // NOI18N
+        jLCorreo.setForeground(new java.awt.Color(204, 204, 204));
+        jLCorreo.setText("Email:");
 
-        jLabel6.setFont(new java.awt.Font("Dubai", 0, 14)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(204, 204, 204));
-        jLabel6.setText("Confirme su email:");
+        jLConCorreo.setFont(new java.awt.Font("Dubai", 0, 14)); // NOI18N
+        jLConCorreo.setForeground(new java.awt.Color(204, 204, 204));
+        jLConCorreo.setText("Confirme su email:");
 
-        jLabel7.setFont(new java.awt.Font("Dubai", 0, 14)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(204, 204, 204));
-        jLabel7.setText("Fecha de nacimiento:");
+        jLNacimiento.setFont(new java.awt.Font("Dubai", 0, 14)); // NOI18N
+        jLNacimiento.setForeground(new java.awt.Color(204, 204, 204));
+        jLNacimiento.setText("Fecha de nacimiento:");
 
-        jLabel8.setFont(new java.awt.Font("Dubai", 0, 14)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(204, 204, 204));
-        jLabel8.setText("Telefono:");
+        jLTelefono.setFont(new java.awt.Font("Dubai", 0, 14)); // NOI18N
+        jLTelefono.setForeground(new java.awt.Color(204, 204, 204));
+        jLTelefono.setText("Telefono:");
 
-        jLabel9.setFont(new java.awt.Font("Dubai", 0, 14)); // NOI18N
-        jLabel9.setForeground(new java.awt.Color(204, 204, 204));
-        jLabel9.setText("Cree una contraseña:");
+        jLPassword.setFont(new java.awt.Font("Dubai", 0, 14)); // NOI18N
+        jLPassword.setForeground(new java.awt.Color(204, 204, 204));
+        jLPassword.setText("Cree una contraseña:");
 
         jTFNombre.setFont(new java.awt.Font("Dubai", 0, 12)); // NOI18N
 
@@ -119,19 +119,19 @@ public class registro extends javax.swing.JFrame {
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(10, 10, 10)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel3)
+                                    .addComponent(jLNombre)
                                     .addComponent(jTFNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel4)
+                                    .addComponent(jLApellidos)
                                     .addComponent(jTFApellidos, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel5)
+                                    .addComponent(jLCorreo)
                                     .addComponent(jTFEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel6)
+                                    .addComponent(jLConCorreo)
                                     .addComponent(jTFConEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel7)
-                                    .addComponent(jLabel8)
+                                    .addComponent(jLNacimiento)
+                                    .addComponent(jLTelefono)
                                     .addComponent(jTFTelefono, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jTFFecha, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel9)
+                                    .addComponent(jLPassword)
                                     .addComponent(jTFContrasenia, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addComponent(jLabel1))
                         .addGap(0, 0, Short.MAX_VALUE)))
@@ -149,31 +149,31 @@ public class registro extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel3)
+                .addComponent(jLNombre)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jTFNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel4)
+                .addComponent(jLApellidos)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jTFApellidos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel5)
+                .addComponent(jLCorreo)
                 .addGap(3, 3, 3)
                 .addComponent(jTFEmail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel6)
+                .addComponent(jLConCorreo)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jTFConEmail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel7)
+                .addComponent(jLNacimiento)
                 .addGap(3, 3, 3)
                 .addComponent(jTFFecha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel8)
+                .addComponent(jLTelefono)
                 .addGap(2, 2, 2)
                 .addComponent(jTFTelefono, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel9)
+                .addComponent(jLPassword)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jTFContrasenia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(26, 26, 26)
@@ -235,15 +235,15 @@ public class registro extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jBRegistrarme;
+    private javax.swing.JLabel jLApellidos;
+    private javax.swing.JLabel jLConCorreo;
+    private javax.swing.JLabel jLCorreo;
+    private javax.swing.JLabel jLNacimiento;
+    private javax.swing.JLabel jLNombre;
+    private javax.swing.JLabel jLPassword;
+    private javax.swing.JLabel jLTelefono;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField jTFApellidos;
     private javax.swing.JTextField jTFConEmail;
