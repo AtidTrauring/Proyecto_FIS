@@ -47,23 +47,19 @@ public class ingresarDinero extends javax.swing.JPanel {
         jLInstruccion.setForeground(new java.awt.Color(204, 204, 204));
         jLInstruccion.setText("Comparta sus datos para ingresar dinero a su cuenta.");
 
-        jPanel2.setBackground(new java.awt.Color(0, 102, 102));
-        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Datos", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Dubai", 0, 12), new java.awt.Color(204, 204, 204))); // NOI18N
+        jPanel2.setBackground(new java.awt.Color(134, 195, 195));
+        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Datos", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Dubai", 0, 12), new java.awt.Color(102, 102, 102))); // NOI18N
 
         jLTituClabe.setFont(new java.awt.Font("Dubai", 0, 12)); // NOI18N
-        jLTituClabe.setForeground(new java.awt.Color(255, 255, 255));
         jLTituClabe.setText("CLABE:");
 
         jLNumeroClabe.setFont(new java.awt.Font("Dubai", 0, 14)); // NOI18N
-        jLNumeroClabe.setForeground(new java.awt.Color(255, 255, 255));
         jLNumeroClabe.setText("jLCLABE");
 
         jLBeneficiario.setFont(new java.awt.Font("Dubai", 0, 12)); // NOI18N
-        jLBeneficiario.setForeground(new java.awt.Color(255, 255, 255));
         jLBeneficiario.setText("CLABE:");
 
         jLUsuario.setFont(new java.awt.Font("Dubai", 0, 14)); // NOI18N
-        jLUsuario.setForeground(new java.awt.Color(255, 255, 255));
         jLUsuario.setText("jLUSUARIO");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
