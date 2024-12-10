@@ -52,10 +52,10 @@ public class transferirDinero extends javax.swing.JPanel {
         jLabel1.setFont(new java.awt.Font("Dubai", 0, 14)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(204, 204, 204));
         jLabel1.setText("Transferir dinero");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 107, -1, -1));
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, -1, -1));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos_banco/transferir-dinero.png"))); // NOI18N
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 132, -1, -1));
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, -1, -1));
 
         jPanel1.setBackground(new java.awt.Color(134, 195, 195));
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Transferencia", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Dubai", 0, 12), new java.awt.Color(0, 51, 51))); // NOI18N
@@ -91,13 +91,13 @@ public class transferirDinero extends javax.swing.JPanel {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 395, -1, -1));
+        add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 330, -1, -1));
 
         jBVolverInicio.setBackground(new java.awt.Color(0, 102, 102));
         jBVolverInicio.setFont(new java.awt.Font("Dubai", 0, 14)); // NOI18N
         jBVolverInicio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos_banco/volver-a-publicar.png"))); // NOI18N
         jBVolverInicio.setText("Volver al Inicio");
-        add(jBVolverInicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(109, 552, -1, -1));
+        add(jBVolverInicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 490, -1, -1));
 
         jPanel2.setBackground(new java.awt.Color(28, 63, 122));
         jPanel2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 102, 102), 3, true));
@@ -131,15 +131,16 @@ public class transferirDinero extends javax.swing.JPanel {
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+                {null},
+                {null},
+                {null},
+                {null}
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+                "Institucion"
             }
         ));
+        jTable1.setSelectionBackground(new java.awt.Color(0, 153, 153));
         jScrollPane1.setViewportView(jTable1);
 
         jLabel6.setFont(new java.awt.Font("Dubai", 0, 12)); // NOI18N
@@ -212,7 +213,7 @@ public class transferirDinero extends javax.swing.JPanel {
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jButton2)
-                .addContainerGap(45, Short.MAX_VALUE))
+                .addContainerGap(42, Short.MAX_VALUE))
         );
 
         add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(275, 30, 480, 510));
