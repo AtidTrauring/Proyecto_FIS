@@ -95,7 +95,7 @@ public class ingresarDinero extends javax.swing.JPanel {
                 .addGap(0, 29, Short.MAX_VALUE))
         );
 
-        jBVolverInicioIngresar.setBackground(new java.awt.Color(0, 102, 102));
+        jBVolverInicioIngresar.setBackground(new java.awt.Color(204, 204, 204));
         jBVolverInicioIngresar.setFont(new java.awt.Font("Dubai", 0, 14)); // NOI18N
         jBVolverInicioIngresar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos_banco/volver-a-publicar.png"))); // NOI18N
         jBVolverInicioIngresar.setText("Volver al Inicio");

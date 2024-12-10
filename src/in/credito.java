@@ -105,12 +105,12 @@ public class credito extends javax.swing.JPanel {
         jLAprobacion.setForeground(new java.awt.Color(255, 255, 255));
         jLAprobacion.setText("jLAprobacion");
 
-        jBVolverInicioCredito.setBackground(new java.awt.Color(0, 102, 102));
+        jBVolverInicioCredito.setBackground(new java.awt.Color(204, 204, 204));
         jBVolverInicioCredito.setFont(new java.awt.Font("Dubai", 0, 14)); // NOI18N
         jBVolverInicioCredito.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos_banco/volver-a-publicar.png"))); // NOI18N
         jBVolverInicioCredito.setText("Volver al Inicio");
 
-        jBSolicitarCredito.setBackground(new java.awt.Color(0, 102, 102));
+        jBSolicitarCredito.setBackground(new java.awt.Color(204, 204, 204));
         jBSolicitarCredito.setFont(new java.awt.Font("Dubai", 0, 14)); // NOI18N
         jBSolicitarCredito.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos_banco/solicitante.png"))); // NOI18N
         jBSolicitarCredito.setText("Solicitar credito");

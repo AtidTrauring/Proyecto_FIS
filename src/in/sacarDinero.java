@@ -77,12 +77,12 @@ public class sacarDinero extends javax.swing.JPanel {
 
         jLImagenSacar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos_banco/retiro-de-dinero.png"))); // NOI18N
 
-        jBVolverInicioIngresar.setBackground(new java.awt.Color(0, 102, 102));
+        jBVolverInicioIngresar.setBackground(new java.awt.Color(204, 204, 204));
         jBVolverInicioIngresar.setFont(new java.awt.Font("Dubai", 0, 14)); // NOI18N
         jBVolverInicioIngresar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos_banco/volver-a-publicar.png"))); // NOI18N
         jBVolverInicioIngresar.setText("Volver al Inicio");
 
-        jBContinuarSacar.setBackground(new java.awt.Color(0, 102, 102));
+        jBContinuarSacar.setBackground(new java.awt.Color(204, 204, 204));
         jBContinuarSacar.setFont(new java.awt.Font("Dubai", 0, 14)); // NOI18N
         jBContinuarSacar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos_banco/continuar (1).png"))); // NOI18N
         jBContinuarSacar.setText("Continuar");

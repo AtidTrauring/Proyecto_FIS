@@ -71,19 +71,19 @@ public class inicio extends javax.swing.JPanel {
         jPanel2.setBackground(new java.awt.Color(134, 195, 195));
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED), "Movimientos", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Dubai", 0, 12), new java.awt.Color(0, 51, 51))); // NOI18N
 
-        jBingEfectivo.setBackground(new java.awt.Color(0, 51, 51));
+        jBingEfectivo.setBackground(new java.awt.Color(204, 204, 204));
         jBingEfectivo.setFont(new java.awt.Font("Dubai", 0, 12)); // NOI18N
         jBingEfectivo.setText("Ingresar dinero");
 
-        JBTransferir.setBackground(new java.awt.Color(0, 51, 51));
+        JBTransferir.setBackground(new java.awt.Color(204, 204, 204));
         JBTransferir.setFont(new java.awt.Font("Dubai", 0, 12)); // NOI18N
         JBTransferir.setText("Tranferir dinero");
 
-        jBSacar.setBackground(new java.awt.Color(0, 51, 51));
+        jBSacar.setBackground(new java.awt.Color(204, 204, 204));
         jBSacar.setFont(new java.awt.Font("Dubai", 0, 12)); // NOI18N
         jBSacar.setText("Sacar dinero");
 
-        jBBancos.setBackground(new java.awt.Color(0, 51, 51));
+        jBBancos.setBackground(new java.awt.Color(204, 204, 204));
         jBBancos.setFont(new java.awt.Font("Dubai", 0, 12)); // NOI18N
         jBBancos.setText("Ver bancos");
 
@@ -117,7 +117,7 @@ public class inicio extends javax.swing.JPanel {
         jPanel3.setBackground(new java.awt.Color(134, 195, 195));
         jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED), "Creditos", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Dubai", 0, 12), new java.awt.Color(0, 51, 51))); // NOI18N
 
-        jBSolcredito.setBackground(new java.awt.Color(0, 51, 51));
+        jBSolcredito.setBackground(new java.awt.Color(204, 204, 204));
         jBSolcredito.setFont(new java.awt.Font("Dubai", 0, 12)); // NOI18N
         jBSolcredito.setText("Solicitar credito");
 
@@ -137,7 +137,7 @@ public class inicio extends javax.swing.JPanel {
                 .addGap(0, 8, Short.MAX_VALUE))
         );
 
-        jBCerrarSesion.setBackground(new java.awt.Color(0, 51, 51));
+        jBCerrarSesion.setBackground(new java.awt.Color(204, 204, 204));
         jBCerrarSesion.setFont(new java.awt.Font("Dubai", 0, 14)); // NOI18N
         jBCerrarSesion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos_banco/cerrar-sesion-de-usuario.png"))); // NOI18N
         jBCerrarSesion.setText("Cerrar Sesion");

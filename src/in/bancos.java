@@ -48,12 +48,12 @@ public class bancos extends javax.swing.JPanel {
 
         jTFBancoIngresado.setFont(new java.awt.Font("Dubai", 0, 12)); // NOI18N
 
-        jBVolverInicioBanco.setBackground(new java.awt.Color(0, 102, 102));
+        jBVolverInicioBanco.setBackground(new java.awt.Color(204, 204, 204));
         jBVolverInicioBanco.setFont(new java.awt.Font("Dubai", 0, 14)); // NOI18N
         jBVolverInicioBanco.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos_banco/volver-a-publicar.png"))); // NOI18N
         jBVolverInicioBanco.setText("Volver al Inicio");
 
-        jBAgregarBanco.setBackground(new java.awt.Color(0, 102, 102));
+        jBAgregarBanco.setBackground(new java.awt.Color(204, 204, 204));
         jBAgregarBanco.setFont(new java.awt.Font("Dubai", 0, 14)); // NOI18N
         jBAgregarBanco.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos_banco/agregar.png"))); // NOI18N
         jBAgregarBanco.setText("Agregar banco");

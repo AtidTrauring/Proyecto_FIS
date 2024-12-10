@@ -60,13 +60,13 @@ public class transferirDinero extends javax.swing.JPanel {
         jPanel1.setBackground(new java.awt.Color(134, 195, 195));
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Transferencia", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Dubai", 0, 12), new java.awt.Color(0, 51, 51))); // NOI18N
 
-        jBClabe.setBackground(new java.awt.Color(0, 102, 102));
+        jBClabe.setBackground(new java.awt.Color(204, 204, 204));
         jBClabe.setFont(new java.awt.Font("Dubai", 0, 12)); // NOI18N
         jBClabe.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos_banco/codigo-de-contrasena.png"))); // NOI18N
         jBClabe.setText("   A una CLABE");
         jBClabe.setToolTipText("");
 
-        jBTarjeta.setBackground(new java.awt.Color(0, 102, 102));
+        jBTarjeta.setBackground(new java.awt.Color(204, 204, 204));
         jBTarjeta.setFont(new java.awt.Font("Dubai", 0, 12)); // NOI18N
         jBTarjeta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos_banco/tarjeta-de-credito.png"))); // NOI18N
         jBTarjeta.setText("  A una Tarjeta");
@@ -93,7 +93,7 @@ public class transferirDinero extends javax.swing.JPanel {
 
         add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 330, -1, -1));
 
-        jBVolverInicio.setBackground(new java.awt.Color(0, 102, 102));
+        jBVolverInicio.setBackground(new java.awt.Color(204, 204, 204));
         jBVolverInicio.setFont(new java.awt.Font("Dubai", 0, 14)); // NOI18N
         jBVolverInicio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos_banco/volver-a-publicar.png"))); // NOI18N
         jBVolverInicio.setText("Volver al Inicio");
@@ -127,6 +127,7 @@ public class transferirDinero extends javax.swing.JPanel {
         jLabel5.setForeground(new java.awt.Color(204, 204, 204));
         jLabel5.setText("$");
 
+        jBTransferir.setBackground(new java.awt.Color(204, 204, 204));
         jBTransferir.setFont(new java.awt.Font("Dubai", 0, 14)); // NOI18N
         jBTransferir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos_banco/transferir-dinero (1).png"))); // NOI18N
         jBTransferir.setText("Transferir");
