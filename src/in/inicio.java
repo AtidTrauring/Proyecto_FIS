@@ -33,6 +33,7 @@ public class inicio extends javax.swing.JPanel {
         jBingEfectivo = new javax.swing.JButton();
         JBTransferir = new javax.swing.JButton();
         jBSacar = new javax.swing.JButton();
+        jBBancos = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         jBSolcredito = new javax.swing.JButton();
         jBCerrarSesion = new javax.swing.JButton();
@@ -82,6 +83,10 @@ public class inicio extends javax.swing.JPanel {
         jBSacar.setFont(new java.awt.Font("Dubai", 0, 12)); // NOI18N
         jBSacar.setText("Sacar dinero");
 
+        jBBancos.setBackground(new java.awt.Color(0, 51, 51));
+        jBBancos.setFont(new java.awt.Font("Dubai", 0, 12)); // NOI18N
+        jBBancos.setText("Ver bancos");
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -91,9 +96,9 @@ public class inicio extends javax.swing.JPanel {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 33, Short.MAX_VALUE)
                 .addComponent(JBTransferir, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(67, 67, 67)
                 .addComponent(jBSacar, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jBBancos, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -103,7 +108,9 @@ public class inicio extends javax.swing.JPanel {
                     .addComponent(jBingEfectivo)
                     .addComponent(JBTransferir))
                 .addGap(18, 18, 18)
-                .addComponent(jBSacar)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jBSacar)
+                    .addComponent(jBBancos))
                 .addContainerGap(19, Short.MAX_VALUE))
         );
 
@@ -173,6 +180,7 @@ public class inicio extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton JBTransferir;
+    private javax.swing.JButton jBBancos;
     private javax.swing.JButton jBCerrarSesion;
     private javax.swing.JButton jBSacar;
     private javax.swing.JButton jBSolcredito;
