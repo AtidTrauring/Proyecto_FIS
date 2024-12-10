@@ -45,6 +45,7 @@ public class credito extends javax.swing.JPanel {
         jTFSueldo = new javax.swing.JTextField();
         jLAprobacion = new javax.swing.JLabel();
         jBVolverInicioCredito = new javax.swing.JButton();
+        jBSolicitarCredito = new javax.swing.JButton();
 
         jPanel1.setBackground(new java.awt.Color(28, 58, 70));
 
@@ -109,6 +110,11 @@ public class credito extends javax.swing.JPanel {
         jBVolverInicioCredito.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos_banco/volver-a-publicar.png"))); // NOI18N
         jBVolverInicioCredito.setText("Volver al Inicio");
 
+        jBSolicitarCredito.setBackground(new java.awt.Color(0, 102, 102));
+        jBSolicitarCredito.setFont(new java.awt.Font("Dubai", 0, 14)); // NOI18N
+        jBSolicitarCredito.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos_banco/solicitante.png"))); // NOI18N
+        jBSolicitarCredito.setText("Solicitar credito");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -116,36 +122,40 @@ public class credito extends javax.swing.JPanel {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLPrestamo)
-                    .addComponent(jLInstruccionCre)
-                    .addComponent(jLCURP)
-                    .addComponent(jLTelefonoLoc)
-                    .addComponent(jLCelular)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLCredito)
-                        .addGap(30, 30, 30)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jRBnoDeudas)
-                            .addComponent(jRBsiDeudas)
-                            .addComponent(jLDeudas)))
-                    .addComponent(jLSueldo)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(10, 10, 10)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTFCelular, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTFTelefonoLoc, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTFCURP, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLPrestamo)
+                            .addComponent(jLInstruccionCre)
+                            .addComponent(jLCURP)
+                            .addComponent(jLTelefonoLoc)
+                            .addComponent(jLCelular)
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(16, 16, 16)
+                                .addComponent(jLCredito)
+                                .addGap(30, 30, 30)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jRBnoCredito)
-                                    .addComponent(jRBsiCredito)))
-                            .addComponent(jTFSueldo, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLAprobacion))))
-                .addContainerGap(29, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jBVolverInicioCredito)
+                                    .addComponent(jRBnoDeudas)
+                                    .addComponent(jRBsiDeudas)
+                                    .addComponent(jLDeudas)))
+                            .addComponent(jLSueldo)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(10, 10, 10)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jTFCelular, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jTFTelefonoLoc, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jTFCURP, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addGap(16, 16, 16)
+                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jRBnoCredito)
+                                            .addComponent(jRBsiCredito)))
+                                    .addComponent(jTFSueldo, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLAprobacion))))
+                        .addGap(0, 19, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jBSolicitarCredito, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jBVolverInicioCredito, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
@@ -187,9 +197,11 @@ public class credito extends javax.swing.JPanel {
                 .addComponent(jTFSueldo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jLAprobacion)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 18, Short.MAX_VALUE)
+                .addComponent(jBSolicitarCredito)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jBVolverInicioCredito)
-                .addContainerGap(22, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -206,6 +218,7 @@ public class credito extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jBSolicitarCredito;
     private javax.swing.JButton jBVolverInicioCredito;
     private javax.swing.JLabel jLAprobacion;
     private javax.swing.JLabel jLCURP;
