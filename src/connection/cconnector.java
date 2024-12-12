@@ -21,4 +21,10 @@ public class cconnector {
         }
         return conectar;
     }
+
+    public void cerrar_conexion(Connection conn) throws SQLException {
+        conn.close();
+    }
+;
+
 }
