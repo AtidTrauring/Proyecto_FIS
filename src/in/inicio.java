@@ -55,18 +55,38 @@ public class inicio extends javax.swing.JPanel {
         jBingEfectivo.setBackground(new java.awt.Color(204, 204, 204));
         jBingEfectivo.setFont(new java.awt.Font("Dubai", 0, 12)); // NOI18N
         jBingEfectivo.setText("Ingresar dinero");
+        jBingEfectivo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBingEfectivoActionPerformed(evt);
+            }
+        });
 
         JBTransferir.setBackground(new java.awt.Color(204, 204, 204));
         JBTransferir.setFont(new java.awt.Font("Dubai", 0, 12)); // NOI18N
         JBTransferir.setText("Tranferir dinero");
+        JBTransferir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JBTransferirActionPerformed(evt);
+            }
+        });
 
         jBSacar.setBackground(new java.awt.Color(204, 204, 204));
         jBSacar.setFont(new java.awt.Font("Dubai", 0, 12)); // NOI18N
         jBSacar.setText("Sacar dinero");
+        jBSacar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBSacarActionPerformed(evt);
+            }
+        });
 
         jBBancos.setBackground(new java.awt.Color(204, 204, 204));
         jBBancos.setFont(new java.awt.Font("Dubai", 0, 12)); // NOI18N
         jBBancos.setText("Ver bancos");
+        jBBancos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBBancosActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -101,6 +121,11 @@ public class inicio extends javax.swing.JPanel {
         jBSolcredito.setBackground(new java.awt.Color(204, 204, 204));
         jBSolcredito.setFont(new java.awt.Font("Dubai", 0, 12)); // NOI18N
         jBSolcredito.setText("Solicitar credito");
+        jBSolcredito.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBSolcreditoActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -122,6 +147,11 @@ public class inicio extends javax.swing.JPanel {
         jBCerrarSesion.setFont(new java.awt.Font("Dubai", 0, 14)); // NOI18N
         jBCerrarSesion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos_banco/cerrar-sesion-de-usuario.png"))); // NOI18N
         jBCerrarSesion.setText("Cerrar Sesion");
+        jBCerrarSesion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBCerrarSesionActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -158,7 +188,39 @@ public class inicio extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    //<editor-fold defaultstate="collapsed" desc="BOTONES">
+    private void jBingEfectivoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBingEfectivoActionPerformed
+        ingresarDinero jfIngresarDinero = new ingresarDinero(); //Se crea un objeto IngresarDinero
+        jfIngresarDinero.setVisible(true);
+    }//GEN-LAST:event_jBingEfectivoActionPerformed
 
+    private void JBTransferirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBTransferirActionPerformed
+        transferirDinero jfTransferir = new transferirDinero();
+        jfTransferir.setVisible(true);
+    }//GEN-LAST:event_JBTransferirActionPerformed
+
+    private void jBSacarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBSacarActionPerformed
+        sacarDinero jfSacarDinero = new sacarDinero();
+        jfSacarDinero.setVisible(true);
+    }//GEN-LAST:event_jBSacarActionPerformed
+
+    private void jBBancosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBBancosActionPerformed
+        JfBanco jfVerBancos = new JfBanco();
+        jfVerBancos.setVisible(true);
+    }//GEN-LAST:event_jBBancosActionPerformed
+
+    private void jBSolcreditoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBSolcreditoActionPerformed
+        credito jfCredito = new credito();
+        jfCredito.setVisible(true);
+    }//GEN-LAST:event_jBSolcreditoActionPerformed
+
+    private void jBCerrarSesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBCerrarSesionActionPerformed
+        jfprincipal jfPrincipal = new jfprincipal();
+        jfPrincipal.setVisible(true);
+    }//GEN-LAST:event_jBCerrarSesionActionPerformed
+
+
+    //<editor-fold defaultstate="collapsed" desc="VARIABLES NO MODIFICABLES">
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton JBTransferir;
     private javax.swing.JButton jBBancos;
@@ -172,4 +234,5 @@ public class inicio extends javax.swing.JPanel {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     // End of variables declaration//GEN-END:variables
+    //</editor-fold>
 }

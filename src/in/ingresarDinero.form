@@ -218,6 +218,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="Volver al Inicio"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBVolverInicioIngresarActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="jLImagenIngresar">
           <Properties>

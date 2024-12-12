@@ -82,6 +82,11 @@ public class ingresarDinero extends javax.swing.JPanel {
         jBVolverInicioIngresar.setFont(new java.awt.Font("Dubai", 0, 14)); // NOI18N
         jBVolverInicioIngresar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos_banco/volver-a-publicar.png"))); // NOI18N
         jBVolverInicioIngresar.setText("Volver al Inicio");
+        jBVolverInicioIngresar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBVolverInicioIngresarActionPerformed(evt);
+            }
+        });
 
         jLImagenIngresar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos_banco/compartir-datos.png"))); // NOI18N
 
@@ -142,7 +147,14 @@ public class ingresarDinero extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    //<editor-fold defaultstate="collapsed" desc="BOTONES">
+    private void jBVolverInicioIngresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBVolverInicioIngresarActionPerformed
+        inicio jFInicio = new inicio(); 
+        jFInicio.setVisible(true);
+    }//GEN-LAST:event_jBVolverInicioIngresarActionPerformed
+    //</editor-fold>
 
+    //<editor-fold defaultstate="collapsed" desc="VARIABLES NO MODIFICABLES">
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jBVolverInicioIngresar;
     private javax.swing.JLabel jLBeneficiario;
@@ -155,4 +167,5 @@ public class ingresarDinero extends javax.swing.JPanel {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables
+    //</editor-fold>
 }
