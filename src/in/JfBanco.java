@@ -40,7 +40,7 @@ public class JfBanco extends javax.swing.JFrame {
         jBAgregarBanco = new javax.swing.JButton();
         jBVolverInicioBanco1 = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Registro Banco");
 
         JpnlLienzo.setBackground(new java.awt.Color(28, 58, 70));
