@@ -17,6 +17,44 @@ public class CQManager {
     private ArrayList<String[]> resultados;
 
     //************ Metodos ************
+    public String buscarValor(String consulta) throws SQLException {
+        String valorObtenido = null;
+        //1. Abrir la conexion
+        conn = conector.conectar();
+        //2. Ejecutar la query(consulta)
+        try {
+            stmt = conn.createStatement();
+            rs = stmt.executeQuery(consulta);
+            if (rs.next()) {
+                valorObtenido = rs.getString(1);
+            } else {
+                // Comento el mensaje para que no aparacezca en multiples veces
+//                cmensajes.warning("Elemento no encontrado", "Buscar objeto");
+
+            }
+        } catch (SQLException ex) {
+            String cadena = "SQLException: " + ex.getMessage() + "\n"
+                    + "SQLState: " + ex.getSQLState() + "\n"
+                    + "VendorError: " + ex.getErrorCode();
+            cmensajes.mistake(cadena, "Conexion");
+        } //3. 
+        finally {
+            //Cerrar los resultados
+            try {
+                rs.close();
+            } catch (SQLException e) {
+            }
+            //Cerrar el statement
+            try {
+                stmt.close();
+            } catch (SQLException e) {
+            }
+            //cerrar conexion
+            conector.cerrar_conexion(conn);
+        }
+        return valorObtenido;
+    }
+
     public ArrayList<String[]> buscar_objetos(String consulta) throws SQLException {
         //1. Abrir la conexion
         conn = conector.conectar();

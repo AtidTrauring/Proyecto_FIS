@@ -36,4 +36,14 @@ public class CModelos {
         return mngr.actualiza_objeto(consulta);
     }
 
+    public String busca_nombre(String nombre) throws SQLException {
+        //consulta = "SELECT `Id_pasajero` FROM `pasajero` WHERE Id_persona = '" + idPersona + "';";
+        consulta = "SELECT `nombre` FROM `banco` WHERE nombre = '" + nombre + "';";
+        return mngr.buscarValor(consulta);
+    }
+
+    public boolean insertaBanco(String banco) throws SQLException {
+        consulta = "INSERT INTO `banco` (`nombre`) VALUES ('" + banco + "');";
+        return mngr.inserta_objeto(consulta);
+    }
 }

@@ -11,7 +11,6 @@ public class cconnector {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
             conectar = DriverManager.getConnection("jdbc:mysql://localhost/banco", "root", "");
-            cmensajes.message("Se conecto correctamente", "Conexion");
         } catch (SQLException ex) {
             String cadena = "SQLException: " + ex.getMessage() + "\n" + "SQLState: " + ex.getSQLState()
                     + "\n" + "VendorError: " + ex.getErrorCode();
