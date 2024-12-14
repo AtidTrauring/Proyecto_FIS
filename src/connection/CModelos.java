@@ -52,4 +52,9 @@ public class CModelos {
         consulta = "INSERT INTO `banco` (`nombre`) VALUES ('" + banco + "');";
         return mngr.inserta_objeto(consulta);
     }
+    
+    public String busca_nombre_usuario(String nombre) throws SQLException {
+        consulta = "SELECT `nombre` FROM `usuario` WHERE nombre = '" + nombre + "';";
+        return mngr.buscarValor(consulta);
+    }
 }
