@@ -20,7 +20,11 @@ public class JFInicio extends javax.swing.JFrame {
        fram.setLocationRelativeTo(null);
     }
     
-    private void mostrarUsuario(){
+    public void setSaludo(String texto) {
+        jLSaludo.setText("Hola, " + texto + "!");
+    }
+    
+    /*private void mostrarUsuario(){
         String usuarioBuscado;
         try {
             String nombreUsuario = inicioSesion.jTFUsuario.getText().trim();
@@ -28,10 +32,8 @@ public class JFInicio extends javax.swing.JFrame {
                 cmensajes.mistake("No hay usuario encontrado", "Pantalla de inicio");
                 return;
             }
-
             // Se busca el usuario.
             usuarioBuscado = modelo.busca_nombre_usuario(nombreUsuario);
-
             if (usuarioBuscado != null) {
                 jLSaludo.setText("¡HOLA " + usuarioBuscado + "!");
             } else {
@@ -40,7 +42,7 @@ public class JFInicio extends javax.swing.JFrame {
         } catch (SQLException e) {
             cmensajes.mistake("No hay usuario en la base de datos", "Pantalla de inicio");
         }
-    }
+    }*/
     
     
     @SuppressWarnings("unchecked")
