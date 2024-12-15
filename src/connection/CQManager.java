@@ -28,7 +28,7 @@ public class CQManager {
             if (rs.next()) {
                 valorObtenido = rs.getString(1);
             } else {
-                // Comento el mensaje para que no aparacezca en multiples veces
+                // Comento el mensaje para que no aparacezca en multiples ocasiones
 //                cmensajes.warning("Elemento no encontrado", "Buscar objeto");
 
             }

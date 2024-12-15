@@ -37,24 +37,49 @@ public class CModelos {
     }
 
     public String busca_nombre(String nombre) throws SQLException {
-        //consulta = "SELECT `Id_pasajero` FROM `pasajero` WHERE Id_persona = '" + idPersona + "';";
         consulta = "SELECT `nombre` FROM `banco` WHERE nombre = '" + nombre + "';";
         return mngr.buscarValor(consulta);
     }
-    
-    public String buscaCliente(String nombre) throws SQLException {
-        //consulta = "SELECT `Id_pasajero` FROM `pasajero` WHERE Id_persona = '" + idPersona + "';";
-        consulta = "SELECT `nombre` FROM `banco` WHERE nombre = '" + nombre + "';";
+
+    public String buscaCliente(String CURP) throws SQLException {
+        consulta = "SELECT curp FROM `usuario` WHERE curp = '" + CURP + "'";
         return mngr.buscarValor(consulta);
+    }
+
+    public String buscaIdCliente(String CURP) throws SQLException {
+        consulta = "SELECT `id_usuario` FROM `usuario` WHERE curp = '" + CURP + "'";
+        return mngr.buscarValor(consulta);
+    }
+
+    public String buscaDireccion(String calle, String numInt, String numExt, String Barrio, String Municipio) throws SQLException {
+        consulta = "SELECT id_direccion FROM `direccion` WHERE calle = '" + calle + "' AND numInt = '" + numInt + "' AND numExt = '" + numExt + "' AND barrio = '" + Barrio + "' AND municipio = '" + Municipio + "';";
+        return mngr.buscarValor(consulta);
+    }
+
+    //nombre, apeP, apeM, email, confEmail, telefono, curp, password, user
+    public boolean insertaUsuario(String[] datosCliente, String id_Usuario) throws SQLException {
+        consulta = "INSERT INTO `registro`(`usuario`, `contraseña`, `id_usuario`) VALUES ('" + datosCliente[8] + "','" + datosCliente[7] + "','" + id_Usuario + "');";
+        return mngr.inserta_objeto(consulta);
+    }
+
+    public boolean insertaCliente(String[] datosCliente, String id_Dir) throws SQLException {
+        consulta = "INSERT INTO `usuario`(`nombre`, `ap_Pat`, `ap_Mat`, `correoElectronico`, `curp`, `id_direccion`) "
+                + "VALUES ('" + datosCliente[0] + "','" + datosCliente[1] + "','" + datosCliente[2] + "','" + datosCliente[3] + "','" + datosCliente[6] + "','" + id_Dir + "');";
+        return mngr.inserta_objeto(consulta);
+    }
+
+    public boolean insertaTelefono(String[] datosCliente, String id_Usuario) throws SQLException {
+        consulta = "INSERT INTO `num_telefonico`(`numero`, `id_usuario`) VALUES ('" + Long.valueOf(datosCliente[5]) + "','" + id_Usuario + "');";
+        return mngr.inserta_objeto(consulta);
+    }
+
+    public boolean insertaDireccion(String calle, String numInt, String numExt, String Barrio, String Municipio) throws SQLException {
+        consulta = "INSERT INTO `direccion`(`calle`, `numExt`, `numInt`, `barrio`, `municipio`) VALUES ('" + calle + "','" + numExt + "','" + numInt + "','" + Barrio + "','" + Municipio + "');";
+        return mngr.inserta_objeto(consulta);
     }
 
     public boolean insertaBanco(String banco) throws SQLException {
         consulta = "INSERT INTO `banco` (`nombre`) VALUES ('" + banco + "');";
         return mngr.inserta_objeto(consulta);
-    }
-    
-    public String busca_nombre_usuario(String nombre) throws SQLException {
-        consulta = "SELECT `nombre` FROM `usuario` WHERE nombre = '" + nombre + "';";
-        return mngr.buscarValor(consulta);
     }
 }
