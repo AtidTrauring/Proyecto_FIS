@@ -13,7 +13,7 @@ public class JfBanco extends javax.swing.JFrame {
     }
 
     public void generarFrame() {
-        JfPrincipal frm = new JfPrincipal();
+        JfP frm = new JfP();
         //Hacemos visible al nuevo frame
         frm.setVisible(true);
         // Centramos el frame

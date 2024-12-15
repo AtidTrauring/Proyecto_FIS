@@ -14,7 +14,7 @@ public class JfRegistro extends javax.swing.JFrame {
     }
 
     public void generarFrame() {
-        JfPrincipal frm = new JfPrincipal();
+        JfP frm = new JfP();
         frm.setVisible(true);
         frm.setLocationRelativeTo(null);
         frm.setSize(295, 490);

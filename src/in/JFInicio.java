@@ -9,21 +9,21 @@ public class JFInicio extends javax.swing.JFrame {
     public JFInicio() {
         initComponents();
     }
-    
+
     private final CModelos modelo = new CModelos();
 
-    public void generacionFrame(){
-       //Se crea el objeto del frame
-       JfPrincipal fram = new JfPrincipal();
-       fram.setTitle("Inicio");
-       fram.setVisible(true);
-       fram.setLocationRelativeTo(null);
+    public void generacionFrame() {
+        //Se crea el objeto del frame
+        JfP fram = new JfP();
+        fram.setTitle("Inicio");
+        fram.setVisible(true);
+        fram.setLocationRelativeTo(null);
     }
-    
+
     public void setSaludo(String texto) {
         jLSaludo.setText("Hola, " + texto + "!");
     }
-    
+
     /*private void mostrarUsuario(){
         String usuarioBuscado;
         try {
@@ -43,8 +43,6 @@ public class JFInicio extends javax.swing.JFrame {
             cmensajes.mistake("No hay usuario en la base de datos", "Pantalla de inicio");
         }
     }*/
-    
-    
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -275,11 +273,11 @@ public class JFInicio extends javax.swing.JFrame {
     }//GEN-LAST:event_jBSolcreditoActionPerformed
 
     private void jBCerrarSesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBCerrarSesionActionPerformed
-        JfPrincipal jfPrincipal = new JfPrincipal();
+        JfP jfPrincipal = new JfP();
         jfPrincipal.setVisible(true);
     }//GEN-LAST:event_jBCerrarSesionActionPerformed
     // </editor-fold> 
- 
+
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
