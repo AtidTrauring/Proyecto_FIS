@@ -1,7 +1,7 @@
 package in;
-public class credito extends javax.swing.JPanel {
+public class JfCredito extends javax.swing.JPanel {
 
-    public credito() {
+    public JfCredito() {
         initComponents();
     }
 

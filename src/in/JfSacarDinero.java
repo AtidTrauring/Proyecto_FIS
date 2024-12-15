@@ -1,6 +1,6 @@
 package in;
-public class sacarDinero extends javax.swing.JPanel {
-    public sacarDinero() {
+public class JfSacarDinero extends javax.swing.JPanel {
+    public JfSacarDinero() {
         initComponents();
     }
     @SuppressWarnings("unchecked")

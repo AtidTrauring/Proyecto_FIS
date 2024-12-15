@@ -7,14 +7,14 @@ import java.util.logging.Logger;
 import java.util.regex.Pattern;
 import mensajes.cmensajes;
 
-public class registro extends javax.swing.JFrame {
+public class JfRegistro extends javax.swing.JFrame {
 
-    public registro() {
+    public JfRegistro() {
         initComponents();
     }
 
     public void generarFrame() {
-        jfprincipal frm = new jfprincipal();
+        JfPrincipal frm = new JfPrincipal();
         frm.setVisible(true);
         frm.setLocationRelativeTo(null);
         frm.setSize(295, 490);
@@ -248,7 +248,7 @@ public class registro extends javax.swing.JFrame {
                 }
             }
         } catch (SQLException ex) {
-            Logger.getLogger(registro.class.getName()).log(Level.SEVERE, "Error al validar el CURP en la base de datos", ex);
+            Logger.getLogger(JfRegistro.class.getName()).log(Level.SEVERE, "Error al validar el CURP en la base de datos", ex);
             cmensajes.mistake("Ocurrió un error al verificar el CURP", "Error");
         }
     }//GEN-LAST:event_jBRegistrarmeActionPerformed
@@ -266,21 +266,23 @@ public class registro extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(registro.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(JfRegistro.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(registro.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(JfRegistro.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(registro.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(JfRegistro.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(registro.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(JfRegistro.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new registro().setVisible(true);
+                new JfRegistro().setVisible(true);
             }
         });
     }

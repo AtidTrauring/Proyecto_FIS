@@ -14,7 +14,7 @@ public class JFInicio extends javax.swing.JFrame {
 
     public void generacionFrame(){
        //Se crea el objeto del frame
-       jfprincipal fram = new jfprincipal();
+       JfPrincipal fram = new JfPrincipal();
        fram.setTitle("Inicio");
        fram.setVisible(true);
        fram.setLocationRelativeTo(null);
@@ -255,12 +255,12 @@ public class JFInicio extends javax.swing.JFrame {
     }//GEN-LAST:event_jBingEfectivoActionPerformed
 
     private void JBTransferirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBTransferirActionPerformed
-        transferirDinero jfTransferir = new transferirDinero();
+        JfTransferirDinero jfTransferir = new JfTransferirDinero();
         jfTransferir.setVisible(true);
     }//GEN-LAST:event_JBTransferirActionPerformed
 
     private void jBSacarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBSacarActionPerformed
-        sacarDinero jfSacarDinero = new sacarDinero();
+        JfSacarDinero jfSacarDinero = new JfSacarDinero();
         jfSacarDinero.setVisible(true);
     }//GEN-LAST:event_jBSacarActionPerformed
 
@@ -270,12 +270,12 @@ public class JFInicio extends javax.swing.JFrame {
     }//GEN-LAST:event_jBBancosActionPerformed
 
     private void jBSolcreditoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBSolcreditoActionPerformed
-        credito jfCredito = new credito();
+        JfCredito jfCredito = new JfCredito();
         jfCredito.setVisible(true);
     }//GEN-LAST:event_jBSolcreditoActionPerformed
 
     private void jBCerrarSesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBCerrarSesionActionPerformed
-        jfprincipal jfPrincipal = new jfprincipal();
+        JfPrincipal jfPrincipal = new JfPrincipal();
         jfPrincipal.setVisible(true);
     }//GEN-LAST:event_jBCerrarSesionActionPerformed
     // </editor-fold> 
