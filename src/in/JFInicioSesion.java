@@ -16,6 +16,10 @@ public class JFInicioSesion extends javax.swing.JFrame {
     public JFInicioSesion() {
         initComponents();
     }
+    
+    public String obtenerUsuario() {
+        return jTFUsuario.getText().trim(); 
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -139,9 +143,11 @@ public class JFInicioSesion extends javax.swing.JFrame {
 
     private void jBAccederActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBAccederActionPerformed
         // Codigo BRISA
-        String texto = jTFUsuario.getText(); // Obtiene el usuario
+        String nombre = jTFUsuario.getText(); // Obtiene el usuario
         JFInicio ventanaInicio = new JFInicio(); 
-        ventanaInicio.setSaludo(texto); 
+        ventanaInicio.setSaludo(nombre); 
+        ventanaInicio.mostrarSaldo(nombre);
+        ventanaInicio.setVisible(true);
     }//GEN-LAST:event_jBAccederActionPerformed
 
     /**

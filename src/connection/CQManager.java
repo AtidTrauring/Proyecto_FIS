@@ -30,7 +30,6 @@ public class CQManager {
             } else {
                 // Comento el mensaje para que no aparacezca en multiples ocasiones
 //                cmensajes.warning("Elemento no encontrado", "Buscar objeto");
-
             }
         } catch (SQLException ex) {
             String cadena = "SQLException: " + ex.getMessage() + "\n"

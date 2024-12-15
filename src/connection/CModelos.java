@@ -82,4 +82,11 @@ public class CModelos {
         consulta = "INSERT INTO `banco` (`nombre`) VALUES ('" + banco + "');";
         return mngr.inserta_objeto(consulta);
     }
+    
+    //-------------------------------------------------------------------------------------
+    public String busca_saldo(String nombreUsuario) throws SQLException {
+        consulta = "SELECT cuenta.saldo FROM cuenta INNER JOIN ba_us_cu  ON cuenta.id_cuenta = ba_us_cu.id_cuenta INNER JOIN usuario ON ba_us_cu.id_usuario = usuario.id_usuario WHERE usuario.nombre = '" +
+                nombreUsuario + "';";
+        return mngr.buscarValor(consulta);
+    }
 }
