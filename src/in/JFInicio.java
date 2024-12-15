@@ -20,29 +20,45 @@ public class JFInicio extends javax.swing.JFrame {
         fram.setLocationRelativeTo(null);
     }
 
-    public void setSaludo(String texto) {
-        jLSaludo.setText("Hola, " + texto + "!");
+    public void setSaludo(String nombre) {
+        jLSaludo.setText("¡Hola, " + nombre + "!");
     }
+    
+    public void mostrarSaldo(String nombreUsuario) {
+    String saldoBuscado;
+    try {
+        System.out.println("Nombre de usuario recibido: " + nombreUsuario);
+        saldoBuscado = modelo.busca_saldo(nombreUsuario);
+        System.out.println("Saldo buscado: " + saldoBuscado);
+        if (saldoBuscado != null) {
+            jLSaldo.setText("$ " + saldoBuscado);
+        } else {
+            jLSaldo.setText("Saldo no encontrado");
+        }
+    } catch (SQLException e) {
+        cmensajes.mistake("Error al buscar el saldo", "Saldo_Inicio");
+    }
+}
 
-    /*private void mostrarUsuario(){
-        String usuarioBuscado;
+
+    /*private void mostrarSaldo() {
+        String saldoBuscado;
+        JFInicioSesion inicioSesion = new JFInicioSesion();
         try {
-            String nombreUsuario = inicioSesion.jTFUsuario.getText().trim();
-            if (nombreUsuario.isEmpty()) {
-                cmensajes.mistake("No hay usuario encontrado", "Pantalla de inicio");
-                return;
-            }
-            // Se busca el usuario.
-            usuarioBuscado = modelo.busca_nombre_usuario(nombreUsuario);
-            if (usuarioBuscado != null) {
-                jLSaludo.setText("¡HOLA " + usuarioBuscado + "!");
+            String nombreUsuario = inicioSesion.obtenerUsuario();
+            System.out.println("Nombre de usuario obtenido: " + nombreUsuario);
+            saldoBuscado = modelo.busca_saldo(nombreUsuario);
+
+            if (saldoBuscado != null) {
+                jLSaldo.setText("$ " + saldoBuscado);
             } else {
-                cmensajes.mistake("Usuario no encontrado", "Pantalla de inicio");
+                jLSaldo.setText("Saldo no encontrado");
             }
         } catch (SQLException e) {
-            cmensajes.mistake("No hay usuario en la base de datos", "Pantalla de inicio");
+            cmensajes.mistake("Error al buscar el saldo", "Saldo_Inicio");
         }
     }*/
+
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -78,7 +94,7 @@ public class JFInicio extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLSaldo)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(236, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
