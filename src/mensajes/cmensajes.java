@@ -1,5 +1,6 @@
 package mensajes;
 
+import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 
@@ -53,6 +54,45 @@ public class cmensajes {
             return true;
         } else {
             cmensajes.message("El correo ingresado no es valido \nIngrese un formato valido", "Registro");
+            return false;
+        }
+    }
+
+    public static boolean validaCURP(String curp, JLabel jlvalidacurp) {
+        if (curp.matches("^[A-Z0-9]{18}$")) {
+            jlvalidacurp.setText("CURP Valida");
+            return true;
+        } else {
+            cmensajes.warning("Debe de ingresar 18 valores alfanumericos en MAYUSCULA", "Valida CURP");
+            return false;
+        }
+    }
+
+    public static boolean validaTelefonos(String local, String cel) {
+        if (local.matches("^[0-9]{10}$") && cel.matches("^[0-9]{10}$")) {
+            //jltelefonos.setText("Valido");
+            return true;
+        } else {
+            //jltelefonos.setText("Solo 10 números en cada recuadro");
+            return false;
+        }
+    }
+
+    public static boolean validaCredito(String idus, String cel, JLabel jltelefonos) {
+        if (idus.matches("^[0-9]{10}$") && cel.matches("^[0-9]{10}$")) {
+            jltelefonos.setText("Valido");
+            return true;
+        } else {
+            jltelefonos.setText("Solo 10 números en cada recuadro");
+            return false;
+        }
+    }
+
+    public static boolean validaRetiro(String sacar) {
+        if (sacar.matches("[0-9]+")) {
+            return true;
+        } else {
+            cmensajes.mistake("Ingresa solo números", "Sacar dinero");
             return false;
         }
     }
