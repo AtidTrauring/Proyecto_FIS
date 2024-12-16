@@ -96,6 +96,92 @@ public class CQManager {
         }
         return resultados;
     }
+    
+    // Esto es para que funcione la transferencia
+    public ArrayList<String[]> buscar_para_otras_Trans(String consulta) throws SQLException {
+        //1. Abrir la conexion
+        conn = conector.conectar();
+        //2. Ejecutar la query(consulta)
+        try {
+            resultados = new ArrayList<>();
+            stmt = conn.createStatement();
+            rs = stmt.executeQuery(consulta);
+            if (rs == null) {
+                cmensajes.warning("Elementos no encontrados", "buscar objetos");
+            } else {
+                while (rs.next()) {
+                    resultados.add(new String[]{
+                        rs.getString(1),
+                        rs.getString(2),
+                        rs.getString(3),
+                        rs.getString(4),
+                        rs.getString(5)});
+                }
+            }
+        } catch (SQLException ex) {
+            String cadena = "SQLException: " + ex.getMessage() + "\n"
+                    + "SQLState: " + ex.getSQLState() + "\n"
+                    + "VendorError: " + ex.getErrorCode();
+            cmensajes.mistake(cadena, "Conexion");
+        } //3. 
+        finally {
+            //Cerrar los resultados
+            try {
+                rs.close();
+            } catch (SQLException e) {
+            }
+            //Cerrar el statement
+            try {
+                stmt.close();
+            } catch (SQLException e) {
+            }
+            //cerrar conexion
+            conector.cerrar_conexion(conn);
+        }
+        return resultados;
+    }
+    
+    public ArrayList<String[]> buscar_para_Trans(String consulta) throws SQLException {
+        //1. Abrir la conexion
+        conn = conector.conectar();
+        //2. Ejecutar la query(consulta)
+        try {
+            resultados = new ArrayList<>();
+            stmt = conn.createStatement();
+            rs = stmt.executeQuery(consulta);
+            if (rs == null) {
+                cmensajes.warning("Elementos no encontrados", "buscar objetos");
+            } else {
+                while (rs.next()) {
+                    resultados.add(new String[]{
+                        rs.getString(1),
+                        rs.getString(2),
+                        rs.getString(3),
+                        rs.getString(4)});
+                }
+            }
+        } catch (SQLException ex) {
+            String cadena = "SQLException: " + ex.getMessage() + "\n"
+                    + "SQLState: " + ex.getSQLState() + "\n"
+                    + "VendorError: " + ex.getErrorCode();
+            cmensajes.mistake(cadena, "Conexion");
+        } //3. 
+        finally {
+            //Cerrar los resultados
+            try {
+                rs.close();
+            } catch (SQLException e) {
+            }
+            //Cerrar el statement
+            try {
+                stmt.close();
+            } catch (SQLException e) {
+            }
+            //cerrar conexion
+            conector.cerrar_conexion(conn);
+        }
+        return resultados;
+    }
 
     public boolean inserta_objeto(String consulta) throws SQLException {
         //1. Abrir la conexion

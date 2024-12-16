@@ -24,6 +24,16 @@ public class JFInicioSesion extends javax.swing.JFrame {
     
     // Va li mio, a ver que show :v
     CModelos mdl = new CModelos();
+    private static String idUsuario; // Atributo estático
+
+    public static void setIdUsuario(String id) {
+        idUsuario = id;
+    }
+
+    public static String getIdUsuario() {
+        return idUsuario;
+    }
+
     
     public boolean campos_Vacios(){
         String user, psw;
@@ -34,8 +44,7 @@ public class JFInicioSesion extends javax.swing.JFrame {
     
     public String obtenerUsuario() {
         return jTFUsuario.getText().trim(); 
-    }
-
+    }  
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -157,33 +166,35 @@ public class JFInicioSesion extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jBAccederActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBAccederActionPerformed
-    String user = jTFUsuario.getText(); 
-    String psw = jTFContrasenia.getText();
-    try {
-        // Verifica que los campos no estén vacíos
-        if (campos_Vacios()) {
-            // Valida las credenciales
-            String idUser = mdl.busca_Usuario(user, psw);
-
-            if (idUser != null) { // Credenciales válidas
-                // Código para avanzar a la siguiente ventana
-                cmensajes.message("Bienvenido, " + user, "Iniciar Sesión");
-
-                // Codigo BRISA
-                String nombre = jTFUsuario.getText(); // Obtiene el usuario
-                JFInicio ventanaInicio = new JFInicio(); 
-                ventanaInicio.setSaludo(nombre); 
-                ventanaInicio.mostrarSaldo(nombre);
-                ventanaInicio.setVisible(true);
-                this.dispose(); // Cierra la ventana actual
-            } else {
-                // Credenciales inválidas
-                cmensajes.warning("Usuario o contraseña incorrectos. Verifica que tus datos sean correctos", "Iniciar Sesión");
+        String user = jTFUsuario.getText(); 
+        String psw = jTFContrasenia.getText();
+        try {
+            // Verifica que los campos no estén vacíos
+            if (campos_Vacios()) {
+                // Valida las credenciales
+                String IdUser = mdl.busca_Usuario(user, psw);
+                
+                if (IdUser != null) { // Credenciales válidas
+                    // Código para avanzar a la siguiente ventana
+                    cmensajes.message("Bienvenido, " + user, "Iniciar Sesión");
+                    setIdUsuario(IdUser);
+                    System.out.println(IdUser);
+                    System.out.println(getIdUsuario());
+                    // Codigo BRISA
+                    String nombre = jTFUsuario.getText(); // Obtiene el usuario
+                    JFInicio ventanaInicio = new JFInicio(); 
+                    ventanaInicio.setSaludo(nombre); 
+                    ventanaInicio.mostrarSaldo(nombre);
+                    ventanaInicio.setVisible(true);
+                    this.dispose(); // Cierra la ventana actual
+                } else {
+                    // Credenciales inválidas
+                    cmensajes.warning("Usuario o contraseña incorrectos. Verifica que tus datos sean correctos", "Iniciar Sesión");
+                }
             }
+        } catch (SQLException e) {
+            cmensajes.mistake("Ocurrió un error inesperado: " + e.getMessage(), "Iniciar Sesión");
         }
-    } catch (SQLException e) {
-        cmensajes.mistake("Ocurrió un error inesperado: " + e.getMessage(), "Iniciar Sesión");
-    }
     }//GEN-LAST:event_jBAccederActionPerformed
 
     /**

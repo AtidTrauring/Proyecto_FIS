@@ -1,5 +1,6 @@
 package in;
 public class JfTransferirDinero extends javax.swing.JPanel {
+    
     public JfTransferirDinero() {
         initComponents();
     }
@@ -197,7 +198,7 @@ public class JfTransferirDinero extends javax.swing.JPanel {
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jBTransferir)
-                .addContainerGap(24, Short.MAX_VALUE))
+                .addContainerGap(29, Short.MAX_VALUE))
         );
 
         add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(275, 30, 480, 510));

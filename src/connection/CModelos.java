@@ -92,8 +92,50 @@ public class CModelos {
     
     // Seccion CAMPI
     public String busca_Usuario(String User, String contra) throws SQLException {
-    consulta = "SELECT Id_Usuario FROM Registro WHERE Usuario = '" + User 
-                + "' AND contraseña = '" + contra + "';";
-    return mngr.buscarValor(consulta);
-}
+        consulta = "SELECT Id_Usuario FROM Registro WHERE Usuario = '" + User 
+                    + "' AND contraseña = '" + contra + "';";
+        return mngr.buscarValor(consulta);
+    }
+    
+    public ArrayList<String[]> busca_Cuenta(String Id_User) throws SQLException {
+        // Consulta para obtener el número de cuenta, nombre del banco y saldo disponible
+        consulta = "SELECT "
+              + "c.id_cuenta AS Id_Cuenta, "  // Añadido el id_cuenta
+              + "c.numdecuenta AS Numero_Cuenta, "
+              + "b.nombre AS Banco, "
+              + "c.saldo AS Saldo_Disponible "
+              + "FROM usuario u "
+              + "JOIN ba_us_cu ba ON u.id_usuario = ba.id_usuario "
+              + "JOIN cuenta c ON ba.id_cuenta = c.id_cuenta "
+              + "JOIN banco b ON ba.id_banco = b.id_banco "
+              + "WHERE u.id_usuario = " + Id_User + ";";
+        return mngr.buscar_para_Trans(consulta);
+    }
+    
+    public ArrayList<String[]> busca_otras_Cuentas(String Id_User) throws SQLException {
+        // Consulta para obtener el número de cuenta, nombre del banco y beneficiario
+        consulta = "SELECT "
+                    + "c.id_cuenta AS Id_Cuenta, "
+                    + "c.numdecuenta AS Numero_Cuenta, "
+                    + "b.nombre AS Banco, "
+                    + "r.Usuario AS Beneficiario, "
+                    + "c.saldo AS Saldo " 
+                    + "FROM usuario u "
+                    + "JOIN ba_us_cu ba ON u.id_usuario = ba.id_usuario "
+                    + "JOIN cuenta c ON ba.id_cuenta = c.id_cuenta "
+                    + "JOIN banco b ON ba.id_banco = b.id_banco "
+                    + "JOIN Registro r ON u.id_usuario = r.id_usuario "
+                    + "WHERE u.id_usuario != " + Id_User + ";"; // Filtra por usuarios diferentes al proporcionado
+        return mngr.buscar_para_otras_Trans(consulta);
+    }  
+    
+    public boolean actualiza_Mi_Saldo(String Id, double saldo) throws SQLException{
+        consulta = "UPDATE banco.Cuenta SET Saldo = "+ saldo +" "+"WHERE Cuenta.Id_Cuenta = " + Id + ";";
+        return mngr.actualiza_objeto(consulta);
+    }
+    
+    public boolean actualiza_Su_Saldo(String Id, double saldo) throws SQLException{
+        consulta = "UPDATE banco.Cuenta SET Saldo = "+ saldo +" "+"WHERE Cuenta.Id_Cuenta = " + Id + ";";
+        return mngr.actualiza_objeto(consulta);
+    }
 }

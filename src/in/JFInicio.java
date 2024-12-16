@@ -3,11 +3,14 @@ package in;
 import connection.CModelos;
 import mensajes.cmensajes;
 import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class JFInicio extends javax.swing.JFrame {
 
     public JFInicio() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     private final CModelos modelo = new CModelos();
@@ -269,8 +272,13 @@ public class JFInicio extends javax.swing.JFrame {
     }//GEN-LAST:event_jBingEfectivoActionPerformed
 
     private void JBTransferirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBTransferirActionPerformed
-        JfTransferirDinero jfTransferir = new JfTransferirDinero();
-        jfTransferir.setVisible(true);
+        try {
+            jFTransferencia trs = new jFTransferencia();
+            trs.setVisible(true);
+            this.dispose();
+        } catch (SQLException ex) {
+            Logger.getLogger(JFInicio.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_JBTransferirActionPerformed
 
     private void jBSacarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBSacarActionPerformed
