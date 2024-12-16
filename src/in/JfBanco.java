@@ -11,21 +11,6 @@ public class JfBanco extends javax.swing.JFrame {
     public JfBanco() {
         initComponents();
     }
-
-    public void generarFrame() {
-        JfP frm = new JfP();
-        //Hacemos visible al nuevo frame
-        frm.setVisible(true);
-        // Centramos el frame
-        frm.setLocationRelativeTo(null);
-        // Asignamos las medidas
-        frm.setSize(295, 490);
-        // No permitimos que cambien las medidas
-        frm.setResizable(false);
-        // Agregamos un titulo
-        frm.setTitle("Formulario Principal");
-        this.dispose();
-    }
     private final CModelos mdl = new CModelos();
 
     @SuppressWarnings("unchecked")
@@ -42,6 +27,7 @@ public class JfBanco extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Registro Banco");
+        setUndecorated(true);
         setPreferredSize(new java.awt.Dimension(300, 510));
         setResizable(false);
 
@@ -149,14 +135,14 @@ public class JfBanco extends javax.swing.JFrame {
                         //Insertar el banco
                         if (mdl.insertaBanco(jTFBancoIngresado1.getText())) {
                             cmensajes.message("El banco se registro con exito!", "Registro Banco");
-                            generarFrame();
+                            this.dispose();
                         } else {
                             cmensajes.mistake("Ocurrio un problema al registrar al banco! \n Intentelo mas tarde por favor!", "Registro Banco");
                         }
                     } else {
                         // Si el banco se encuentra, indicar que ya se encuentra el banco
                         cmensajes.message("El banco ingresado, ya se encuentra registrado!", "Registro Banco");
-                        generarFrame();
+                        this.dispose();
                     }
                 } catch (SQLException ex) {
                     cmensajes.warning("Error de SQL: " + ex.getMessage(), "Insertar");
@@ -168,7 +154,7 @@ public class JfBanco extends javax.swing.JFrame {
     }//GEN-LAST:event_jBAgregarBancoActionPerformed
 
     private void jBVolverInicioBanco1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBVolverInicioBanco1ActionPerformed
-        generarFrame();
+        this.dispose();
     }//GEN-LAST:event_jBVolverInicioBanco1ActionPerformed
 
     public static void main(String args[]) {

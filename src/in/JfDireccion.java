@@ -66,6 +66,7 @@ public class JfDireccion extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Registro Usuario");
+        setUndecorated(true);
         setPreferredSize(new java.awt.Dimension(415, 340));
         setResizable(false);
 
@@ -76,6 +77,11 @@ public class JfDireccion extends javax.swing.JFrame {
         JbtnCancelar.setFont(new java.awt.Font("Dubai", 0, 14)); // NOI18N
         JbtnCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos_banco/cancelar.png"))); // NOI18N
         JbtnCancelar.setText("Cancelar");
+        JbtnCancelar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JbtnCancelarActionPerformed(evt);
+            }
+        });
 
         JbtnRegistrar.setBackground(new java.awt.Color(204, 204, 204));
         JbtnRegistrar.setFont(new java.awt.Font("Dubai", 0, 14)); // NOI18N
@@ -216,6 +222,7 @@ public class JfDireccion extends javax.swing.JFrame {
                     mdl.insertaTelefono(dUsuario, mdl.buscaIdCliente(dUsuario[6]));
                     mdl.insertaUsuario(dUsuario, mdl.buscaIdCliente(dUsuario[6]));
                     cmensajes.message("Se registró al usuario con éxito!", "Registro Usuario");
+                    cmensajes.message("Ya puede inciar sesion con sus credenciales!", "Registro Usuario");
                     this.dispose();
                 } else {
                     cmensajes.warning("La dirección ya está registrada!", "Registro Usuario");
@@ -226,6 +233,11 @@ public class JfDireccion extends javax.swing.JFrame {
             e.printStackTrace();
         }
     }//GEN-LAST:event_JbtnRegistrarActionPerformed
+
+    private void JbtnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JbtnCancelarActionPerformed
+        cmensajes.message("Cancelamos el registro", "Registro Usuario");
+        this.dispose();
+    }//GEN-LAST:event_JbtnCancelarActionPerformed
 
     /**
      * @param args the command line arguments

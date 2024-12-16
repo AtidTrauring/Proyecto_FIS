@@ -50,7 +50,10 @@ public class JFSacar extends javax.swing.JFrame {
         jlsaldo = new javax.swing.JLabel();
         jlnuevosaldo = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setTitle("Sacar Dinero");
+        setUndecorated(true);
+        setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(28, 58, 70));
 

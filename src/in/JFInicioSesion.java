@@ -1,13 +1,16 @@
 package in;
+
 import connection.CModelos;
 import java.sql.SQLException;
 import mensajes.cmensajes;
+
 public class JFInicioSesion extends javax.swing.JFrame {
+
     public JFInicioSesion() {
         initComponents();
         this.setLocationRelativeTo(null);
     }
-    
+
     // Va li mio, a ver que show :v
     CModelos mdl = new CModelos();
     private static String idUsuario; // Atributo estático
@@ -20,16 +23,17 @@ public class JFInicioSesion extends javax.swing.JFrame {
         return idUsuario;
     }
 
-    public boolean campos_Vacios(){
+    public boolean campos_Vacios() {
         String user, psw;
         user = jTFUsuario.getText();
         psw = jTFContrasenia.getText();
         return !(user.isEmpty() || psw.isEmpty());
     }
-    
+
     public String obtenerUsuario() {
-        return jTFUsuario.getText().trim(); 
-    }  
+        return jTFUsuario.getText().trim();
+    }
+
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -149,14 +153,14 @@ public class JFInicioSesion extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jBAccederActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBAccederActionPerformed
-        String user = jTFUsuario.getText(); 
+        String user = jTFUsuario.getText();
         String psw = jTFContrasenia.getText();
         try {
             // Verifica que los campos no estén vacíos
             if (campos_Vacios()) {
                 // Valida las credenciales
                 String IdUser = mdl.busca_Usuario(user, psw);
-                
+
                 if (IdUser != null) { // Credenciales válidas
                     // Código para avanzar a la siguiente ventana
                     cmensajes.message("Bienvenido, " + user, "Iniciar Sesión");
@@ -165,8 +169,9 @@ public class JFInicioSesion extends javax.swing.JFrame {
                     System.out.println(getIdUsuario());
                     // Codigo BRISA
                     String nombre = jTFUsuario.getText(); // Obtiene el usuario
-                    JFInicio ventanaInicio = new JFInicio(); 
-                    ventanaInicio.setSaludo(nombre); 
+                    JFInicio ventanaInicio = new JFInicio();
+                    ventanaInicio.setSaludo(nombre);
+                    ventanaInicio.setSize(289, 460);
                     ventanaInicio.mostrarSaldo(nombre);
                     ventanaInicio.setVisible(true);
                     this.dispose(); // Cierra la ventana actual
