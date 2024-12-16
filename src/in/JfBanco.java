@@ -44,23 +44,18 @@ public class JfBanco extends javax.swing.JFrame {
         setTitle("Registro Banco");
 
         JpnlLienzo.setBackground(new java.awt.Color(28, 58, 70));
-        JpnlLienzo.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLEtiRegistro.setFont(new java.awt.Font("Dubai", 0, 14)); // NOI18N
         jLEtiRegistro.setForeground(new java.awt.Color(204, 204, 204));
         jLEtiRegistro.setText("Registro de bancos");
-        JpnlLienzo.add(jLEtiRegistro, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 10, -1, -1));
 
         jLImagen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos_banco/banca-en-linea2.png"))); // NOI18N
-        JpnlLienzo.add(jLImagen, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, -1, -1));
 
         jLIngresarBanco1.setFont(new java.awt.Font("Dubai", 0, 14)); // NOI18N
         jLIngresarBanco1.setForeground(new java.awt.Color(255, 255, 255));
         jLIngresarBanco1.setText("Nombre del banco a ingresar:");
-        JpnlLienzo.add(jLIngresarBanco1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 290, -1, -1));
 
         jTFBancoIngresado1.setFont(new java.awt.Font("Dubai", 0, 12)); // NOI18N
-        JpnlLienzo.add(jTFBancoIngresado1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 320, 250, -1));
 
         jBAgregarBanco.setBackground(new java.awt.Color(204, 204, 204));
         jBAgregarBanco.setFont(new java.awt.Font("Dubai", 0, 14)); // NOI18N
@@ -71,7 +66,6 @@ public class JfBanco extends javax.swing.JFrame {
                 jBAgregarBancoActionPerformed(evt);
             }
         });
-        JpnlLienzo.add(jBAgregarBanco, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 370, -1, -1));
 
         jBVolverInicioBanco1.setBackground(new java.awt.Color(204, 204, 204));
         jBVolverInicioBanco1.setFont(new java.awt.Font("Dubai", 0, 14)); // NOI18N
@@ -82,17 +76,56 @@ public class JfBanco extends javax.swing.JFrame {
                 jBVolverInicioBanco1ActionPerformed(evt);
             }
         });
-        JpnlLienzo.add(jBVolverInicioBanco1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 420, -1, -1));
+
+        javax.swing.GroupLayout JpnlLienzoLayout = new javax.swing.GroupLayout(JpnlLienzo);
+        JpnlLienzo.setLayout(JpnlLienzoLayout);
+        JpnlLienzoLayout.setHorizontalGroup(
+            JpnlLienzoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(JpnlLienzoLayout.createSequentialGroup()
+                .addGap(90, 90, 90)
+                .addComponent(jLEtiRegistro))
+            .addGroup(JpnlLienzoLayout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addComponent(jLImagen))
+            .addGroup(JpnlLienzoLayout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addComponent(jLIngresarBanco1))
+            .addGroup(JpnlLienzoLayout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addComponent(jTFBancoIngresado1, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(JpnlLienzoLayout.createSequentialGroup()
+                .addGap(70, 70, 70)
+                .addComponent(jBAgregarBanco))
+            .addGroup(JpnlLienzoLayout.createSequentialGroup()
+                .addGap(70, 70, 70)
+                .addComponent(jBVolverInicioBanco1))
+        );
+        JpnlLienzoLayout.setVerticalGroup(
+            JpnlLienzoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(JpnlLienzoLayout.createSequentialGroup()
+                .addGap(10, 10, 10)
+                .addComponent(jLEtiRegistro)
+                .addGap(6, 6, 6)
+                .addComponent(jLImagen)
+                .addGap(0, 0, 0)
+                .addComponent(jLIngresarBanco1)
+                .addGap(6, 6, 6)
+                .addComponent(jTFBancoIngresado1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(23, 23, 23)
+                .addComponent(jBAgregarBanco)
+                .addGap(9, 9, 9)
+                .addComponent(jBVolverInicioBanco1))
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(JpnlLienzo, javax.swing.GroupLayout.DEFAULT_SIZE, 292, Short.MAX_VALUE)
+            .addComponent(JpnlLienzo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(JpnlLienzo, javax.swing.GroupLayout.DEFAULT_SIZE, 480, Short.MAX_VALUE)
+            .addComponent(JpnlLienzo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();

@@ -123,66 +123,51 @@ public class JfRegistro extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         JpnlLienzo.setBackground(new java.awt.Color(28, 58, 70));
-        JpnlLienzo.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         JlblTitulo.setFont(new java.awt.Font("Dubai", 0, 36)); // NOI18N
         JlblTitulo.setForeground(new java.awt.Color(204, 204, 204));
         JlblTitulo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         JlblTitulo.setText("BANATESChi");
-        JpnlLienzo.add(JlblTitulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 20, 210, -1));
 
         JlblLeyenda.setFont(new java.awt.Font("Dubai", 1, 12)); // NOI18N
         JlblLeyenda.setForeground(new java.awt.Color(204, 204, 204));
         JlblLeyenda.setText("Ingrese los datos que a continuacion se solicitan:");
-        JpnlLienzo.add(JlblLeyenda, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 89, -1, -1));
 
         jLNombre.setFont(new java.awt.Font("Dubai", 0, 14)); // NOI18N
         jLNombre.setForeground(new java.awt.Color(204, 204, 204));
         jLNombre.setText("Nombre (s):");
-        JpnlLienzo.add(jLNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(16, 128, -1, -1));
 
         jLApellidos.setFont(new java.awt.Font("Dubai", 0, 14)); // NOI18N
         jLApellidos.setForeground(new java.awt.Color(204, 204, 204));
         jLApellidos.setText("Apellido Paterno:");
-        JpnlLienzo.add(jLApellidos, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 130, -1, -1));
 
         jLCorreo.setFont(new java.awt.Font("Dubai", 0, 14)); // NOI18N
         jLCorreo.setForeground(new java.awt.Color(204, 204, 204));
         jLCorreo.setText("Email:");
-        JpnlLienzo.add(jLCorreo, new org.netbeans.lib.awtextra.AbsoluteConstraints(16, 203, -1, -1));
 
         jLConCorreo.setFont(new java.awt.Font("Dubai", 0, 14)); // NOI18N
         jLConCorreo.setForeground(new java.awt.Color(204, 204, 204));
         jLConCorreo.setText("Confirme su email:");
-        JpnlLienzo.add(jLConCorreo, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 200, -1, -1));
 
         jLTelefono.setFont(new java.awt.Font("Dubai", 0, 14)); // NOI18N
         jLTelefono.setForeground(new java.awt.Color(204, 204, 204));
         jLTelefono.setText("Telefono:");
-        JpnlLienzo.add(jLTelefono, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 280, -1, -1));
 
         jLPassword.setFont(new java.awt.Font("Dubai", 0, 14)); // NOI18N
         jLPassword.setForeground(new java.awt.Color(204, 204, 204));
         jLPassword.setText("Cree una contraseña:");
-        JpnlLienzo.add(jLPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(16, 350, -1, -1));
 
         jTFNombre.setFont(new java.awt.Font("Dubai", 0, 12)); // NOI18N
-        JpnlLienzo.add(jTFNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(16, 158, 207, -1));
 
         jTFApellidoP.setFont(new java.awt.Font("Dubai", 0, 12)); // NOI18N
-        JpnlLienzo.add(jTFApellidoP, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 160, 207, -1));
 
         jTFEmail.setFont(new java.awt.Font("Dubai", 0, 12)); // NOI18N
-        JpnlLienzo.add(jTFEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(16, 230, 207, -1));
 
         jTFConEmail.setFont(new java.awt.Font("Dubai", 0, 12)); // NOI18N
-        JpnlLienzo.add(jTFConEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 230, 207, -1));
 
         jTFTelefono.setFont(new java.awt.Font("Dubai", 0, 12)); // NOI18N
-        JpnlLienzo.add(jTFTelefono, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 310, 207, -1));
 
         jTFContrasenia.setFont(new java.awt.Font("Dubai", 0, 12)); // NOI18N
-        JpnlLienzo.add(jTFContrasenia, new org.netbeans.lib.awtextra.AbsoluteConstraints(16, 380, 207, -1));
 
         jBRegistrarme.setBackground(new java.awt.Color(204, 204, 204));
         jBRegistrarme.setFont(new java.awt.Font("Dubai", 0, 18)); // NOI18N
@@ -194,41 +179,146 @@ public class JfRegistro extends javax.swing.JFrame {
                 jBRegistrarmeActionPerformed(evt);
             }
         });
-        JpnlLienzo.add(jBRegistrarme, new org.netbeans.lib.awtextra.AbsoluteConstraints(477, 360, 190, -1));
 
         jLUser.setFont(new java.awt.Font("Dubai", 0, 14)); // NOI18N
         jLUser.setForeground(new java.awt.Color(204, 204, 204));
         jLUser.setText("Ingrese su usuario:");
-        JpnlLienzo.add(jLUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 350, -1, -1));
 
         jTFUsuario.setFont(new java.awt.Font("Dubai", 0, 12)); // NOI18N
-        JpnlLienzo.add(jTFUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 380, 207, -1));
 
         JtxfCURP.setFont(new java.awt.Font("Dubai", 0, 12)); // NOI18N
-        JpnlLienzo.add(JtxfCURP, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 310, 207, -1));
 
         JlblCURP.setFont(new java.awt.Font("Dubai", 0, 14)); // NOI18N
         JlblCURP.setForeground(new java.awt.Color(204, 204, 204));
         JlblCURP.setText("CURP");
-        JpnlLienzo.add(JlblCURP, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 280, -1, -1));
 
         jLApellidoM.setFont(new java.awt.Font("Dubai", 0, 14)); // NOI18N
         jLApellidoM.setForeground(new java.awt.Color(204, 204, 204));
         jLApellidoM.setText("Apellido Materno:");
-        JpnlLienzo.add(jLApellidoM, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 130, -1, -1));
 
         jTFApellidoM.setFont(new java.awt.Font("Dubai", 0, 12)); // NOI18N
-        JpnlLienzo.add(jTFApellidoM, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 160, 207, -1));
+
+        javax.swing.GroupLayout JpnlLienzoLayout = new javax.swing.GroupLayout(JpnlLienzo);
+        JpnlLienzo.setLayout(JpnlLienzoLayout);
+        JpnlLienzoLayout.setHorizontalGroup(
+            JpnlLienzoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(JpnlLienzoLayout.createSequentialGroup()
+                .addGap(240, 240, 240)
+                .addComponent(JlblTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(JpnlLienzoLayout.createSequentialGroup()
+                .addGap(6, 6, 6)
+                .addComponent(JlblLeyenda))
+            .addGroup(JpnlLienzoLayout.createSequentialGroup()
+                .addGap(16, 16, 16)
+                .addComponent(jLNombre)
+                .addGap(154, 154, 154)
+                .addComponent(jLApellidos)
+                .addGap(130, 130, 130)
+                .addComponent(jLApellidoM))
+            .addGroup(JpnlLienzoLayout.createSequentialGroup()
+                .addGap(16, 16, 16)
+                .addComponent(jTFNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(17, 17, 17)
+                .addComponent(jTFApellidoP, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(23, 23, 23)
+                .addComponent(jTFApellidoM, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(JpnlLienzoLayout.createSequentialGroup()
+                .addGap(16, 16, 16)
+                .addComponent(jLCorreo)
+                .addGap(190, 190, 190)
+                .addComponent(jLConCorreo))
+            .addGroup(JpnlLienzoLayout.createSequentialGroup()
+                .addGap(16, 16, 16)
+                .addComponent(jTFEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(17, 17, 17)
+                .addComponent(jTFConEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(JpnlLienzoLayout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addComponent(JlblCURP)
+                .addGap(187, 187, 187)
+                .addComponent(jLTelefono))
+            .addGroup(JpnlLienzoLayout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addComponent(JtxfCURP, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(13, 13, 13)
+                .addComponent(jTFTelefono, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(JpnlLienzoLayout.createSequentialGroup()
+                .addGap(16, 16, 16)
+                .addGroup(JpnlLienzoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLPassword)
+                    .addComponent(jTFContrasenia, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(17, 17, 17)
+                .addGroup(JpnlLienzoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLUser)
+                    .addComponent(jTFUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(30, 30, 30)
+                .addComponent(jBRegistrarme, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+        JpnlLienzoLayout.setVerticalGroup(
+            JpnlLienzoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(JpnlLienzoLayout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addComponent(JlblTitulo)
+                .addGap(7, 7, 7)
+                .addComponent(JlblLeyenda)
+                .addGap(18, 18, 18)
+                .addGroup(JpnlLienzoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLNombre)
+                    .addGroup(JpnlLienzoLayout.createSequentialGroup()
+                        .addGap(2, 2, 2)
+                        .addGroup(JpnlLienzoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLApellidos)
+                            .addComponent(jLApellidoM))))
+                .addGap(4, 4, 4)
+                .addGroup(JpnlLienzoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jTFNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(JpnlLienzoLayout.createSequentialGroup()
+                        .addGap(2, 2, 2)
+                        .addGroup(JpnlLienzoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jTFApellidoP, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTFApellidoM, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGap(13, 13, 13)
+                .addGroup(JpnlLienzoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(JpnlLienzoLayout.createSequentialGroup()
+                        .addGap(3, 3, 3)
+                        .addComponent(jLCorreo))
+                    .addComponent(jLConCorreo))
+                .addGap(3, 3, 3)
+                .addGroup(JpnlLienzoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jTFEmail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTFConEmail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(23, 23, 23)
+                .addGroup(JpnlLienzoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(JlblCURP)
+                    .addComponent(jLTelefono))
+                .addGap(6, 6, 6)
+                .addGroup(JpnlLienzoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(JtxfCURP, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTFTelefono, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(13, 13, 13)
+                .addGroup(JpnlLienzoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(JpnlLienzoLayout.createSequentialGroup()
+                        .addComponent(jLPassword)
+                        .addGap(6, 6, 6)
+                        .addComponent(jTFContrasenia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(JpnlLienzoLayout.createSequentialGroup()
+                        .addComponent(jLUser)
+                        .addGap(6, 6, 6)
+                        .addComponent(jTFUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(JpnlLienzoLayout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addComponent(jBRegistrarme))))
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(JpnlLienzo, javax.swing.GroupLayout.DEFAULT_SIZE, 686, Short.MAX_VALUE)
+            .addComponent(JpnlLienzo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(JpnlLienzo, javax.swing.GroupLayout.DEFAULT_SIZE, 419, Short.MAX_VALUE)
+            .addComponent(JpnlLienzo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();

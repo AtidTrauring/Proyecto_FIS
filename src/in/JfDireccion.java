@@ -67,12 +67,10 @@ public class JfDireccion extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         JpnlLienzo.setBackground(new java.awt.Color(28, 58, 70));
-        JpnlLienzo.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         JbtnCancelar.setBackground(new java.awt.Color(204, 204, 204));
         JbtnCancelar.setFont(new java.awt.Font("Dubai", 0, 14)); // NOI18N
         JbtnCancelar.setText("Cancelar");
-        JpnlLienzo.add(JbtnCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 150, 130, 40));
 
         JbtnRegistrar.setBackground(new java.awt.Color(204, 204, 204));
         JbtnRegistrar.setFont(new java.awt.Font("Dubai", 0, 14)); // NOI18N
@@ -82,53 +80,116 @@ public class JfDireccion extends javax.swing.JFrame {
                 JbtnRegistrarActionPerformed(evt);
             }
         });
-        JpnlLienzo.add(JbtnRegistrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 100, -1, 40));
 
         JlblTitulo.setFont(new java.awt.Font("Dubai", 0, 36)); // NOI18N
         JlblTitulo.setForeground(new java.awt.Color(204, 204, 204));
         JlblTitulo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         JlblTitulo.setText("BANATESChi");
-        JpnlLienzo.add(JlblTitulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 20, 210, 40));
 
         JlblCalle.setFont(new java.awt.Font("Dubai", 0, 14)); // NOI18N
         JlblCalle.setForeground(new java.awt.Color(204, 204, 204));
         JlblCalle.setText("Calle");
-        JpnlLienzo.add(JlblCalle, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, -1, -1));
-        JpnlLienzo.add(JtxtCalle, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 100, 200, -1));
 
         JlblNumExt.setFont(new java.awt.Font("Dubai", 0, 14)); // NOI18N
         JlblNumExt.setForeground(new java.awt.Color(204, 204, 204));
         JlblNumExt.setText("Numero Exterior");
-        JpnlLienzo.add(JlblNumExt, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 130, -1, -1));
-        JpnlLienzo.add(JtxtNumE, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 150, 200, -1));
 
         JlblNumInt.setFont(new java.awt.Font("Dubai", 0, 14)); // NOI18N
         JlblNumInt.setForeground(new java.awt.Color(204, 204, 204));
         JlblNumInt.setText("Numero Interior");
-        JpnlLienzo.add(JlblNumInt, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 180, -1, -1));
-        JpnlLienzo.add(JtxtNumI, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 200, 200, -1));
 
         JlblBC.setFont(new java.awt.Font("Dubai", 0, 14)); // NOI18N
         JlblBC.setForeground(new java.awt.Color(204, 204, 204));
         JlblBC.setText("Barrio/Colonia");
-        JpnlLienzo.add(JlblBC, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 230, -1, -1));
-        JpnlLienzo.add(JtxtBC, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 250, 200, -1));
 
         JlblMunicipio.setFont(new java.awt.Font("Dubai", 0, 14)); // NOI18N
         JlblMunicipio.setForeground(new java.awt.Color(204, 204, 204));
         JlblMunicipio.setText("Municipio");
-        JpnlLienzo.add(JlblMunicipio, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 280, -1, -1));
-        JpnlLienzo.add(JtxtMunicipio, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 300, 200, -1));
+
+        javax.swing.GroupLayout JpnlLienzoLayout = new javax.swing.GroupLayout(JpnlLienzo);
+        JpnlLienzo.setLayout(JpnlLienzoLayout);
+        JpnlLienzoLayout.setHorizontalGroup(
+            JpnlLienzoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(JpnlLienzoLayout.createSequentialGroup()
+                .addGap(50, 50, 50)
+                .addComponent(JlblTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(JpnlLienzoLayout.createSequentialGroup()
+                .addGap(10, 10, 10)
+                .addGroup(JpnlLienzoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(JtxtCalle, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(JlblCalle)
+                    .addComponent(JtxtNumE, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(JlblNumExt)
+                    .addComponent(JtxtNumI, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(JlblNumInt))
+                .addGap(20, 20, 20)
+                .addGroup(JpnlLienzoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(JbtnRegistrar)
+                    .addComponent(JbtnCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)))
+            .addGroup(JpnlLienzoLayout.createSequentialGroup()
+                .addGap(10, 10, 10)
+                .addGroup(JpnlLienzoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(JtxtBC, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(JlblBC)))
+            .addGroup(JpnlLienzoLayout.createSequentialGroup()
+                .addGap(10, 10, 10)
+                .addGroup(JpnlLienzoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(JlblMunicipio)
+                    .addComponent(JtxtMunicipio, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))
+        );
+        JpnlLienzoLayout.setVerticalGroup(
+            JpnlLienzoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(JpnlLienzoLayout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addComponent(JlblTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(20, 20, 20)
+                .addGroup(JpnlLienzoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(JpnlLienzoLayout.createSequentialGroup()
+                        .addGroup(JpnlLienzoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(JpnlLienzoLayout.createSequentialGroup()
+                                .addGap(20, 20, 20)
+                                .addComponent(JtxtCalle, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(JlblCalle))
+                        .addGap(8, 8, 8)
+                        .addGroup(JpnlLienzoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(JpnlLienzoLayout.createSequentialGroup()
+                                .addGap(20, 20, 20)
+                                .addComponent(JtxtNumE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(JlblNumExt))
+                        .addGap(8, 8, 8)
+                        .addGroup(JpnlLienzoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(JpnlLienzoLayout.createSequentialGroup()
+                                .addGap(20, 20, 20)
+                                .addComponent(JtxtNumI, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(JlblNumInt)))
+                    .addGroup(JpnlLienzoLayout.createSequentialGroup()
+                        .addGap(20, 20, 20)
+                        .addComponent(JbtnRegistrar, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(10, 10, 10)
+                        .addComponent(JbtnCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(8, 8, 8)
+                .addGroup(JpnlLienzoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(JpnlLienzoLayout.createSequentialGroup()
+                        .addGap(20, 20, 20)
+                        .addComponent(JtxtBC, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(JlblBC))
+                .addGap(8, 8, 8)
+                .addGroup(JpnlLienzoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(JlblMunicipio)
+                    .addGroup(JpnlLienzoLayout.createSequentialGroup()
+                        .addGap(20, 20, 20)
+                        .addComponent(JtxtMunicipio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(JpnlLienzo, javax.swing.GroupLayout.DEFAULT_SIZE, 372, Short.MAX_VALUE)
+            .addComponent(JpnlLienzo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(JpnlLienzo, javax.swing.GroupLayout.DEFAULT_SIZE, 338, Short.MAX_VALUE)
+            .addComponent(JpnlLienzo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
