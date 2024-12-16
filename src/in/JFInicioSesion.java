@@ -4,6 +4,10 @@
  */
 package in;
 
+import connection.CModelos;
+import java.sql.SQLException;
+import mensajes.cmensajes;
+
 /**
  *
  * @author ADMIN
@@ -15,6 +19,17 @@ public class JFInicioSesion extends javax.swing.JFrame {
      */
     public JFInicioSesion() {
         initComponents();
+        this.setLocationRelativeTo(null);
+    }
+    
+    // Va li mio, a ver que show :v
+    CModelos mdl = new CModelos();
+    
+    public boolean campos_Vacios(){
+        String user, psw;
+        user = jTFUsuario.getText();
+        psw = jTFContrasenia.getText();
+        return !(user.isEmpty() || psw.isEmpty());
     }
     
     public String obtenerUsuario() {
@@ -142,12 +157,33 @@ public class JFInicioSesion extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jBAccederActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBAccederActionPerformed
-        // Codigo BRISA
-        String nombre = jTFUsuario.getText(); // Obtiene el usuario
-        JFInicio ventanaInicio = new JFInicio(); 
-        ventanaInicio.setSaludo(nombre); 
-        ventanaInicio.mostrarSaldo(nombre);
-        ventanaInicio.setVisible(true);
+    String user = jTFUsuario.getText(); 
+    String psw = jTFContrasenia.getText();
+    try {
+        // Verifica que los campos no estén vacíos
+        if (campos_Vacios()) {
+            // Valida las credenciales
+            String idUser = mdl.busca_Usuario(user, psw);
+
+            if (idUser != null) { // Credenciales válidas
+                // Código para avanzar a la siguiente ventana
+                cmensajes.message("Bienvenido, " + user, "Iniciar Sesión");
+
+                // Codigo BRISA
+                String nombre = jTFUsuario.getText(); // Obtiene el usuario
+                JFInicio ventanaInicio = new JFInicio(); 
+                ventanaInicio.setSaludo(nombre); 
+                ventanaInicio.mostrarSaldo(nombre);
+                ventanaInicio.setVisible(true);
+                this.dispose(); // Cierra la ventana actual
+            } else {
+                // Credenciales inválidas
+                cmensajes.warning("Usuario o contraseña incorrectos. Verifica que tus datos sean correctos", "Iniciar Sesión");
+            }
+        }
+    } catch (SQLException e) {
+        cmensajes.mistake("Ocurrió un error inesperado: " + e.getMessage(), "Iniciar Sesión");
+    }
     }//GEN-LAST:event_jBAccederActionPerformed
 
     /**

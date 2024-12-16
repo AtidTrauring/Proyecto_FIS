@@ -89,4 +89,11 @@ public class CModelos {
                 nombreUsuario + "';";
         return mngr.buscarValor(consulta);
     }
+    
+    // Seccion CAMPI
+    public String busca_Usuario(String User, String contra) throws SQLException {
+    consulta = "SELECT Id_Usuario FROM Registro WHERE Usuario = '" + User 
+                + "' AND contraseña = '" + contra + "';";
+    return mngr.buscarValor(consulta);
+}
 }
