@@ -10,7 +10,7 @@ public class cconnector {
     public Connection conectar() {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            conectar = DriverManager.getConnection("jdbc:mysql://localhost/banco", "root", "");
+            conectar = DriverManager.getConnection("jdbc:mysql://localhost/banco", "root", "2022452008");
         } catch (SQLException ex) {
             String cadena = "SQLException: " + ex.getMessage() + "\n" + "SQLState: " + ex.getSQLState()
                     + "\n" + "VendorError: " + ex.getErrorCode();

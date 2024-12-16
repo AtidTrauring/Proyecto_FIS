@@ -178,7 +178,7 @@ public class JFInicioSesion extends javax.swing.JFrame {
                 this.dispose(); // Cierra la ventana actual
             } else {
                 // Credenciales inválidas
-                cmensajes.warning("Usuario o contraseña incorrectos. Verifica que tus datos sean correctos", "Iniciar Sesión");
+                cmensajes.warning("Usuario o contraseña incorrectos.", "Iniciar Sesión");
             }
         }
     } catch (SQLException e) {
