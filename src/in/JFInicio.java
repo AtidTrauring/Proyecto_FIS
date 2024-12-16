@@ -285,7 +285,7 @@ public class JFInicio extends javax.swing.JFrame {
     }//GEN-LAST:event_JBTransferirActionPerformed
 
     private void jBSacarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBSacarActionPerformed
-        JFSacarDinero jfSacarDinero = new JFSacarDinero();
+        JFSacar jfSacarDinero = new JFSacar();
         jfSacarDinero.setVisible(true);
     }//GEN-LAST:event_jBSacarActionPerformed
 

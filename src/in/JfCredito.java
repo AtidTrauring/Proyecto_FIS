@@ -15,7 +15,7 @@ public class JfCredito extends javax.swing.JFrame {
     CModelos cm = new CModelos();
     ArrayList<String[]> results;
     /* ---------------------------- Llamar a interfaz de inicio ---------------------------- */
-    JFSacarDinero s = new JFSacarDinero();
+    JFSacar s = new JFSacar();
 
     /* ---------------------------- Llamar a interfaz de inicio ---------------------------- */
 
