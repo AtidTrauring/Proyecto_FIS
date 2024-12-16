@@ -21,7 +21,9 @@ public class JFIngresarDinero extends javax.swing.JFrame {
         jBVolverInicioIngresar = new javax.swing.JButton();
         jLImagenIngresar = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setTitle("Ingreo de Dinero");
+        setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(28, 58, 70));
 
@@ -150,6 +152,7 @@ public class JFIngresarDinero extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jBVolverInicioIngresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBVolverInicioIngresarActionPerformed

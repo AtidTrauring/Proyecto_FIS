@@ -79,7 +79,9 @@ public class JFInicio extends javax.swing.JFrame {
         jBSolcredito = new javax.swing.JButton();
         jBCerrarSesion = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setTitle("Menu Principal");
+        setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(28, 58, 70));
 
@@ -263,6 +265,7 @@ public class JFInicio extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     //<editor-fold defaultstate="collapsed" desc="BOTONES">

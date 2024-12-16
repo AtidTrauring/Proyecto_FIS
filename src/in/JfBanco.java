@@ -42,6 +42,8 @@ public class JfBanco extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Registro Banco");
+        setPreferredSize(new java.awt.Dimension(300, 510));
+        setResizable(false);
 
         JpnlLienzo.setBackground(new java.awt.Color(28, 58, 70));
 
@@ -111,10 +113,11 @@ public class JfBanco extends javax.swing.JFrame {
                 .addComponent(jLIngresarBanco1)
                 .addGap(6, 6, 6)
                 .addComponent(jTFBancoIngresado1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(23, 23, 23)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jBAgregarBanco)
-                .addGap(9, 9, 9)
-                .addComponent(jBVolverInicioBanco1))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jBVolverInicioBanco1)
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());

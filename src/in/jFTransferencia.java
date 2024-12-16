@@ -215,7 +215,9 @@ public class jFTransferencia extends javax.swing.JFrame {
         jScrollPane4 = new javax.swing.JScrollPane();
         jTAInformacion1 = new javax.swing.JTextArea();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setTitle("Transferencias");
+        setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(28, 58, 70));
 
@@ -433,6 +435,7 @@ public class jFTransferencia extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jBVolverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBVolverActionPerformed

@@ -121,6 +121,9 @@ public class JfRegistro extends javax.swing.JFrame {
         jTFApellidoM = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setTitle("Registro Usuario");
+        setPreferredSize(new java.awt.Dimension(700, 490));
+        setResizable(false);
 
         JpnlLienzo.setBackground(new java.awt.Color(28, 58, 70));
 
