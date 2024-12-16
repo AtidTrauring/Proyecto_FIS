@@ -88,9 +88,6 @@ public class JfBanco extends javax.swing.JFrame {
                 .addComponent(jLEtiRegistro))
             .addGroup(JpnlLienzoLayout.createSequentialGroup()
                 .addGap(20, 20, 20)
-                .addComponent(jLImagen))
-            .addGroup(JpnlLienzoLayout.createSequentialGroup()
-                .addGap(20, 20, 20)
                 .addComponent(jLIngresarBanco1))
             .addGroup(JpnlLienzoLayout.createSequentialGroup()
                 .addGap(20, 20, 20)
@@ -101,6 +98,9 @@ public class JfBanco extends javax.swing.JFrame {
             .addGroup(JpnlLienzoLayout.createSequentialGroup()
                 .addGap(70, 70, 70)
                 .addComponent(jBVolverInicioBanco1))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JpnlLienzoLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLImagen, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         JpnlLienzoLayout.setVerticalGroup(
             JpnlLienzoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

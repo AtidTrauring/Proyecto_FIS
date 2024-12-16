@@ -12,6 +12,7 @@ public class JfRegistro extends javax.swing.JFrame {
     public JfRegistro() {
         initComponents();
     }
+    private final CModelos mdl = new CModelos();
 
     public void generarFrame() {
         JfP frm = new JfP();
@@ -33,8 +34,6 @@ public class JfRegistro extends javax.swing.JFrame {
         frm.datosUsuario(new String[]{nombre, apeP, apeM, email, confEmail, telefono, curp, password, user});
         this.dispose();
     }
-
-    private final CModelos mdl = new CModelos();
 
     public boolean validaCampos() {
         String nombre, apeP, apeM, email, confEmail, telefono, curp, password, user;
@@ -369,9 +368,6 @@ public class JfRegistro extends javax.swing.JFrame {
         }
         //</editor-fold>
         //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
