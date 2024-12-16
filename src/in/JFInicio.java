@@ -26,32 +26,13 @@ public class JFInicio extends javax.swing.JFrame {
     public void setSaludo(String nombre) {
         jLSaludo.setText("¡Hola, " + nombre + "!");
     }
-    
+
     public void mostrarSaldo(String nombreUsuario) {
-    String saldoBuscado;
-    try {
-        System.out.println("Nombre de usuario recibido: " + nombreUsuario);
-        saldoBuscado = modelo.busca_saldo(nombreUsuario);
-        System.out.println("Saldo buscado: " + saldoBuscado);
-        if (saldoBuscado != null) {
-            jLSaldo.setText("$ " + saldoBuscado);
-        } else {
-            jLSaldo.setText("Saldo no encontrado");
-        }
-    } catch (SQLException e) {
-        cmensajes.mistake("Error al buscar el saldo", "Saldo_Inicio");
-    }
-}
-
-
-    /*private void mostrarSaldo() {
         String saldoBuscado;
-        JFInicioSesion inicioSesion = new JFInicioSesion();
         try {
-            String nombreUsuario = inicioSesion.obtenerUsuario();
-            System.out.println("Nombre de usuario obtenido: " + nombreUsuario);
+            System.out.println("Nombre de usuario recibido: " + nombreUsuario);
             saldoBuscado = modelo.busca_saldo(nombreUsuario);
-
+            System.out.println("Saldo buscado: " + saldoBuscado);
             if (saldoBuscado != null) {
                 jLSaldo.setText("$ " + saldoBuscado);
             } else {
@@ -60,7 +41,7 @@ public class JFInicio extends javax.swing.JFrame {
         } catch (SQLException e) {
             cmensajes.mistake("Error al buscar el saldo", "Saldo_Inicio");
         }
-    }*/
+    }
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -290,6 +271,7 @@ public class JFInicio extends javax.swing.JFrame {
 
     private void jBBancosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBBancosActionPerformed
         JfBanco jfVerBancos = new JfBanco();
+        jfVerBancos.setSize(280, 478);
         jfVerBancos.setVisible(true);
     }//GEN-LAST:event_jBBancosActionPerformed
 
