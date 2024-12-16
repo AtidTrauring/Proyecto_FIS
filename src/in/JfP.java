@@ -18,7 +18,6 @@ public class JfP extends javax.swing.JFrame {
         frm.setResizable(false);
         // Agregamos un titulo
         frm.setTitle("Inicio de Sesion");
-        this.dispose();
     }
 
     public void generarFrameR() {
@@ -28,7 +27,6 @@ public class JfP extends javax.swing.JFrame {
         frm.setSize(700, 490);
         frm.setResizable(false);
         frm.setTitle("Registro Usuario");
-        this.dispose();
     }
 
     @SuppressWarnings("unchecked")
