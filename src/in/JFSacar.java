@@ -107,7 +107,7 @@ public class JFSacar extends javax.swing.JFrame {
             }
         });
 
-        jLImagenSacar1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hidalgo/retiro-de-dinero.png"))); // NOI18N
+        jLImagenSacar1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos_banco/retiro-de-dinero.png"))); // NOI18N
 
         jlid.setForeground(new java.awt.Color(255, 255, 255));
         jlid.setText("jLabel2");
@@ -171,7 +171,7 @@ public class JFSacar extends javax.swing.JFrame {
                 .addComponent(jLImagenSacar1, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLImagenSacar)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 48, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jlnuevosaldo)
                 .addGap(26, 26, 26)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
