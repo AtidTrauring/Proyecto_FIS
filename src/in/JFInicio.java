@@ -3,6 +3,7 @@ package in;
 import connection.CModelos;
 import mensajes.cmensajes;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -31,6 +32,7 @@ public class JFInicio extends javax.swing.JFrame {
     public void asignanombre(String nombre) {
         usuario = nombre;
     }
+    ArrayList<String[]> rs;
 
     public void mostrarSaldo(String nombreUsuario) {
         String saldoBuscado;
@@ -38,6 +40,16 @@ public class JFInicio extends javax.swing.JFrame {
             System.out.println("Nombre de usuario recibido: " + nombreUsuario);
             saldoBuscado = modelo.busca_saldo(nombreUsuario);
             System.out.println("Saldo buscado: " + saldoBuscado);
+            //Inico Mike
+            rs = modelo.busca_ID(nombreUsuario);
+            if (rs != null && !rs.isEmpty()) {
+                String idusuario = rs.get(0)[0];
+                jLID.setText(idusuario);
+            } else {
+                System.out.println("No se encontró información del usuario.");
+                jLID.setText("N/A"); // Valor predeterminado si no hay resultados
+            }
+            //Fin Mike
             if (saldoBuscado != null) {
                 jLSaldo.setText("$ " + saldoBuscado);
             } else {
@@ -47,22 +59,22 @@ public class JFInicio extends javax.swing.JFrame {
             cmensajes.mistake("Error al buscar el saldo", "Saldo_Inicio");
         }
     }
-    
-    public void mostrarID(String nombreUsuario) {
-        String IDBuscado;
-        try {
-            System.out.println("Nombre de usuario recibido: " + nombreUsuario);
-            IDBuscado = modelo.busca_ID(nombreUsuario);
-            System.out.println("ID buscado: " + IDBuscado);
-            if (IDBuscado != null) {
-                jLID.setText("ID de usuario: " + IDBuscado);
-            } else {
-                jLSaldo.setText("ID no encontrado");
-            }
-        } catch (SQLException e) {
-            cmensajes.mistake("Error al buscar el ID", "Saldo_Inicio");
-        }
-    }
+
+//    public void mostrarID(String nombreUsuario) {
+//        String IDBuscado;
+//        try {
+//            System.out.println("Nombre de usuario recibido: " + nombreUsuario);
+//            IDBuscado = modelo.busca_ID(nombreUsuario);
+//            System.out.println("ID buscado: " + IDBuscado);
+//            if (IDBuscado != null) {
+//                jLID.setText("ID de usuario: " + IDBuscado);
+//            } else {
+//                jLSaldo.setText("ID no encontrado");
+//            }
+//        } catch (SQLException e) {
+//            cmensajes.mistake("Error al buscar el ID", "Saldo_Inicio");
+//        }
+//    }
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
