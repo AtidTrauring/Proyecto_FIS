@@ -58,9 +58,9 @@ public class cmensajes {
         }
     }
 
-    public static boolean validaCURP(String curp, JLabel jlvalidacurp) {
+    public static boolean validaCURP(String curp) {
         if (curp.matches("^[A-Z0-9]{18}$")) {
-            jlvalidacurp.setText("CURP Valida");
+            System.out.println("valida");
             return true;
         } else {
             cmensajes.warning("Debe de ingresar 18 valores alfanumericos en MAYUSCULA", "Valida CURP");

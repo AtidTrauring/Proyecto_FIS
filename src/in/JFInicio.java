@@ -282,7 +282,7 @@ public class JFInicio extends javax.swing.JFrame {
     }//GEN-LAST:event_jBBancosActionPerformed
 
     private void jBSolcreditoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBSolcreditoActionPerformed
-        JfCredito jfCredito = new JfCredito();
+        jfCredito jfCredito = new jfCredito();
         jfCredito.setVisible(true);
     }//GEN-LAST:event_jBSolcreditoActionPerformed
 
