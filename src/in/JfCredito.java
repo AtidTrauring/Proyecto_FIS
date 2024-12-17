@@ -18,7 +18,6 @@ public class JfCredito extends javax.swing.JFrame {
     JFSacar s = new JFSacar();
 
     /* ---------------------------- Llamar a interfaz de inicio ---------------------------- */
-
     public JfCredito() {
         initComponents();
         this.setLocationRelativeTo(null);
@@ -487,9 +486,10 @@ public class JfCredito extends javax.swing.JFrame {
     }//GEN-LAST:event_jbbuscarcurpActionPerformed
 
     private void jbbackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbbackActionPerformed
-        //System.exit(0);
-        this.setVisible(false);
-        s.setVisible(true);
+        //this.setVisible(false);
+        //s.setVisible(true);
+        JFInicio inicio = new JFInicio();
+        inicio.setVisible(true);
     }//GEN-LAST:event_jbbackActionPerformed
 
     private void jrbdeudasiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbdeudasiActionPerformed

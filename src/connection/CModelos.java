@@ -166,7 +166,7 @@ public class CModelos {
     }
 
     public boolean insertar_telefonos(String telocal, String cel, String iduser) throws SQLException {
-        consulta = "INSERT INTO telefono(id_telefono, tel_local, numero, id_usuario) VALUES (NULL, '" + telocal + "', '" + cel + "', '" + iduser + "');";
+        consulta = "INSERT INTO num_telefonico(id_telefono, tel_local, numero, id_usuario) VALUES (NULL, '" + telocal + "', '" + cel + "', '" + iduser + "');";
         return mngr.insertar(consulta);
     }
 
