@@ -45,6 +45,9 @@ public class JFInicio extends javax.swing.JFrame {
             if (rs != null && !rs.isEmpty()) {
                 String idusuario = rs.get(0)[0];
                 jLID.setText(idusuario);
+                String idus = jLID.getText();
+                JFSacar s = new JFSacar();
+                s.setDato(idus);
             } else {
                 System.out.println("No se encontró información del usuario.");
                 jLID.setText("N/A"); // Valor predeterminado si no hay resultados
