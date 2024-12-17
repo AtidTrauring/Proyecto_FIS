@@ -16,6 +16,9 @@ public class JFInicio extends javax.swing.JFrame {
 
     private final CModelos modelo = new CModelos();
     public static String usuario;
+    private String dato, ns;
+    String idus;
+    ArrayList<String[]> saldon;
 
     public void generacionFrame() {
         //Se crea el objeto del frame
@@ -45,7 +48,7 @@ public class JFInicio extends javax.swing.JFrame {
             if (rs != null && !rs.isEmpty()) {
                 String idusuario = rs.get(0)[0];
                 jLID.setText(idusuario);
-                String idus = jLID.getText();
+                idus = jLID.getText();
                 JFSacar s = new JFSacar();
                 s.setDato(idus);
             } else {
@@ -60,6 +63,32 @@ public class JFInicio extends javax.swing.JFrame {
             }
         } catch (SQLException e) {
             cmensajes.mistake("Error al buscar el saldo", "Saldo_Inicio");
+        }
+    }
+
+    public void setNuevoSaldo(String dato) {
+        this.dato = dato;
+        jlsaldonuevo.setText(dato);
+
+        try {
+            String ns = jlsaldonuevo.getText(); // Nuevo saldo
+            boolean actualizado = modelo.actualizar_saldo(ns, idus);
+
+            if (actualizado) {
+                // Obtener el saldo actualizado después del cambio
+                String nuevoSaldoMostrado = modelo.busca_saldo(idus); // Asegúrate de tener un método busca_saldo
+                jLSaldo.setText(nuevoSaldoMostrado);
+                cmensajes.message("Saldo actualizado exitosamente", "Actualización de Saldo");
+            } else {
+                cmensajes.mistake("No se pudo actualizar el saldo. Verifica los datos.", "Error de Actualización");
+            }
+
+        } catch (SQLException ex) {
+            Logger.getLogger(JFSacar.class.getName()).log(Level.SEVERE, "Error al actualizar el saldo", ex);
+            cmensajes.mistake("Error en la base de datos: " + ex.getMessage(), "Error");
+        } catch (Exception e) {
+            Logger.getLogger(JFSacar.class.getName()).log(Level.SEVERE, "Error inesperado", e);
+            cmensajes.mistake("Ocurrió un error inesperado: " + e.getMessage(), "Error");
         }
     }
 
@@ -78,7 +107,6 @@ public class JFInicio extends javax.swing.JFrame {
 //            cmensajes.mistake("Error al buscar el ID", "Saldo_Inicio");
 //        }
 //    }
-
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -96,6 +124,7 @@ public class JFInicio extends javax.swing.JFrame {
         jBSolcredito = new javax.swing.JButton();
         jBCerrarSesion = new javax.swing.JButton();
         jLID = new javax.swing.JLabel();
+        jlsaldonuevo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Menu Principal");
@@ -239,6 +268,9 @@ public class JFInicio extends javax.swing.JFrame {
         jLID.setForeground(new java.awt.Color(204, 255, 255));
         jLID.setText("ID");
 
+        jlsaldonuevo.setForeground(new java.awt.Color(255, 255, 255));
+        jlsaldonuevo.setText("jLabel1");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -247,7 +279,8 @@ public class JFInicio extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(jlsaldonuevo)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jBCerrarSesion))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -276,7 +309,9 @@ public class JFInicio extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jBCerrarSesion)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jBCerrarSesion)
+                    .addComponent(jlsaldonuevo))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -389,6 +424,7 @@ public class JFInicio extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
+    private javax.swing.JLabel jlsaldonuevo;
     // End of variables declaration//GEN-END:variables
     // </editor-fold>
 }

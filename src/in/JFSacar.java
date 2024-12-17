@@ -104,6 +104,11 @@ public class JFSacar extends javax.swing.JFrame {
         jBVolverInicioIngresar.setBackground(new java.awt.Color(204, 204, 204));
         jBVolverInicioIngresar.setFont(new java.awt.Font("Dubai", 0, 14)); // NOI18N
         jBVolverInicioIngresar.setText("Volver al Inicio");
+        jBVolverInicioIngresar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBVolverInicioIngresarActionPerformed(evt);
+            }
+        });
 
         jBContinuarSacar.setBackground(new java.awt.Color(204, 204, 204));
         jBContinuarSacar.setFont(new java.awt.Font("Dubai", 0, 14)); // NOI18N
@@ -235,6 +240,15 @@ public class JFSacar extends javax.swing.JFrame {
             cmensajes.mistake("El valor ingresado no es válido. Ingresa solo números.", "Error de formato");
         }
     }//GEN-LAST:event_jBContinuarSacarActionPerformed
+
+    private void jBVolverInicioIngresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBVolverInicioIngresarActionPerformed
+        // TODO add your handling code here:
+        JFInicio in = new JFInicio();
+        this.setVisible(false);
+        in.setVisible(true);
+        String datosaldo = jlnuevosaldo.getText();
+        in.setNuevoSaldo(datosaldo);
+    }//GEN-LAST:event_jBVolverInicioIngresarActionPerformed
 
     /**
      * @param args the command line arguments
