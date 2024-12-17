@@ -85,7 +85,7 @@ public class CModelos {
 
     //-------------------------------------------------------------------------------------
     public String busca_saldo(String nombreUsuario) throws SQLException {
-        consulta = "SELECT cuenta.saldo FROM cuenta INNER JOIN ba_us_cu  ON cuenta.id_cuenta = ba_us_cu.id_cuenta INNER JOIN usuario ON ba_us_cu.id_usuario = usuario.id_usuario WHERE usuario.nombre = '"
+        consulta = "SELECT c.saldo FROM ba_us_cu bc INNER JOIN usuario u ON bc.id_usuario = u.id_usuario INNER JOIN cuenta c ON bc.id_cuenta = c.id_cuenta INNER JOIN registro r ON r.id_usuario = u.id_usuario WHERE r.usuario = '"
                 + nombreUsuario + "';";
         return mngr.buscarValor(consulta);
     }
@@ -161,7 +161,7 @@ public class CModelos {
     }
 
     public ArrayList<String[]> mostrarsaldo(String valor) throws SQLException {
-        consulta = "SELECT c.saldo FROM ba_us_cu bc INNER JOIN usuario u ON bc.id_usuario = u.id_usuario INNER JOIN cuenta c ON bc.id_cuenta = c.id_cuenta WHERE u.id_usuario = '" + valor + "'";
+        consulta = "SELECT c.saldo FROM ba_us_cu bc INNER JOIN usuario u ON bc.id_usuario = u.id_usuario INNER JOIN cuenta c ON bc.id_cuenta = c.id_cuenta INNER JOIN registro r ON r.id_usuario = u.id_usuario WHERE u.id_usuario = '" + valor + "'";
         return mngr.busquedas(consulta);
     }
 
@@ -201,7 +201,7 @@ public class CModelos {
     }
     
     public ArrayList<String[]> busca_ID(String nombreUsuario) throws SQLException {
-        consulta = "SELECT u1.id_usuario FROM usuario u1 INNER JOIN ba_us_cu ON u1.id_usuario = ba_us_cu.id_usuario INNER JOIN usuario u2 ON ba_us_cu.id_usuario = u2.id_usuario WHERE u2.nombre = '" +
+        consulta = "SELECT u.id_usuario FROM ba_us_cu bc INNER JOIN usuario u ON bc.id_usuario = u.id_usuario INNER JOIN cuenta c ON bc.id_cuenta = c.id_cuenta INNER JOIN registro r ON r.id_usuario = u.id_usuario WHERE r.usuario = '" +
                 nombreUsuario + "';";
         return mngr.busquedas(consulta);
     }
