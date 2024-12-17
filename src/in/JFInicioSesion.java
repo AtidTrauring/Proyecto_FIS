@@ -171,6 +171,7 @@ public class JFInicioSesion extends javax.swing.JFrame {
                     String nombre = jTFUsuario.getText(); // Obtiene el usuario
                     JFInicio ventanaInicio = new JFInicio();
                     ventanaInicio.setSaludo(nombre);
+                    ventanaInicio.asignanombre(nombre);
                     ventanaInicio.setSize(275, 415);
                     ventanaInicio.mostrarSaldo(nombre);
                     ventanaInicio.setVisible(true);

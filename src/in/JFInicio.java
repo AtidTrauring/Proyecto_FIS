@@ -14,6 +14,7 @@ public class JFInicio extends javax.swing.JFrame {
     }
 
     private final CModelos modelo = new CModelos();
+    public static String usuario;
 
     public void generacionFrame() {
         //Se crea el objeto del frame
@@ -25,6 +26,10 @@ public class JFInicio extends javax.swing.JFrame {
 
     public void setSaludo(String nombre) {
         jLSaludo.setText("¡Hola, " + nombre + "!");
+    }
+
+    public void asignanombre(String nombre) {
+        usuario = nombre;
     }
 
     public void mostrarSaldo(String nombreUsuario) {
@@ -251,6 +256,7 @@ public class JFInicio extends javax.swing.JFrame {
     //<editor-fold defaultstate="collapsed" desc="BOTONES">
     private void jBingEfectivoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBingEfectivoActionPerformed
         JFIngresarDinero ingresarDinero = new JFIngresarDinero(); //Se crea un objeto IngresarDinero
+        ingresarDinero.asignaUsuario(usuario);
         ingresarDinero.setVisible(true);
     }//GEN-LAST:event_jBingEfectivoActionPerformed
 

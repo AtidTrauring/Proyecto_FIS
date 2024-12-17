@@ -1,11 +1,15 @@
 package in;
 
 public class JFIngresarDinero extends javax.swing.JFrame {
-
+    
     public JFIngresarDinero() {
         initComponents();
     }
-
+    
+    public void asignaUsuario(String nombre) {
+        jLUsuario.setText("USUARIO: " + nombre);
+    }
+    
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -159,7 +163,7 @@ public class JFIngresarDinero extends javax.swing.JFrame {
     private void jBVolverInicioIngresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBVolverInicioIngresarActionPerformed
         this.dispose();
     }//GEN-LAST:event_jBVolverInicioIngresarActionPerformed
-
+    
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
