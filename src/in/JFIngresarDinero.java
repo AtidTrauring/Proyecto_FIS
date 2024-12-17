@@ -1,13 +1,26 @@
 package in;
 
+import connection.CModelos;
+import java.sql.SQLException;
+
 public class JFIngresarDinero extends javax.swing.JFrame {
     
     public JFIngresarDinero() {
         initComponents();
     }
     
-    public void asignaUsuario(String nombre) {
-        jLUsuario.setText("USUARIO: " + nombre);
+    private final CModelos modelo = new CModelos();
+    
+    public void asignaUsuario(String nombreUsuario) throws SQLException {
+        String nombre;
+        nombre = modelo.busca_nombre_usuario(nombreUsuario);
+        jLUsuario.setText(nombre);
+    }
+    
+    public void asignaCuenta(String nombreUsuario) throws SQLException {
+        String cuenta;
+        cuenta = modelo.busca_nombre_cuenta(nombreUsuario);
+        jLClabe.setText(cuenta);
     }
     
     @SuppressWarnings("unchecked")
@@ -19,9 +32,9 @@ public class JFIngresarDinero extends javax.swing.JFrame {
         jLInstruccion = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jLTituClabe = new javax.swing.JLabel();
-        jLNumeroClabe = new javax.swing.JLabel();
-        jLBeneficiario = new javax.swing.JLabel();
         jLUsuario = new javax.swing.JLabel();
+        jLBeneficiario = new javax.swing.JLabel();
+        jLClabe = new javax.swing.JLabel();
         jBVolverInicioIngresar = new javax.swing.JButton();
         jLImagenIngresar = new javax.swing.JLabel();
 
@@ -44,16 +57,16 @@ public class JFIngresarDinero extends javax.swing.JFrame {
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Datos", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Dubai", 0, 12), new java.awt.Color(102, 102, 102))); // NOI18N
 
         jLTituClabe.setFont(new java.awt.Font("Dubai", 0, 12)); // NOI18N
-        jLTituClabe.setText("CLABE:");
+        jLTituClabe.setText("BENEFICIARIO:");
 
-        jLNumeroClabe.setFont(new java.awt.Font("Dubai", 0, 14)); // NOI18N
-        jLNumeroClabe.setText("jLCLABE");
+        jLUsuario.setFont(new java.awt.Font("Dubai", 0, 14)); // NOI18N
+        jLUsuario.setText("jLCLABE");
 
         jLBeneficiario.setFont(new java.awt.Font("Dubai", 0, 12)); // NOI18N
         jLBeneficiario.setText("CLABE:");
 
-        jLUsuario.setFont(new java.awt.Font("Dubai", 0, 14)); // NOI18N
-        jLUsuario.setText("jLUSUARIO");
+        jLClabe.setFont(new java.awt.Font("Dubai", 0, 14)); // NOI18N
+        jLClabe.setText("CLABE");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -66,13 +79,13 @@ public class JFIngresarDinero extends javax.swing.JFrame {
                         .addComponent(jLTituClabe))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(30, 30, 30)
-                        .addComponent(jLNumeroClabe))
+                        .addComponent(jLUsuario))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(jLBeneficiario))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(28, 28, 28)
-                        .addComponent(jLUsuario)))
+                        .addComponent(jLClabe)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
@@ -80,11 +93,11 @@ public class JFIngresarDinero extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addComponent(jLTituClabe)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLNumeroClabe)
+                .addComponent(jLUsuario)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLBeneficiario)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLUsuario)
+                .addComponent(jLClabe)
                 .addGap(0, 29, Short.MAX_VALUE))
         );
 
@@ -200,9 +213,9 @@ public class JFIngresarDinero extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jBVolverInicioIngresar;
     private javax.swing.JLabel jLBeneficiario;
+    private javax.swing.JLabel jLClabe;
     private javax.swing.JLabel jLImagenIngresar;
     private javax.swing.JLabel jLInstruccion;
-    private javax.swing.JLabel jLNumeroClabe;
     private javax.swing.JLabel jLTitClabe;
     private javax.swing.JLabel jLTituClabe;
     private javax.swing.JLabel jLUsuario;

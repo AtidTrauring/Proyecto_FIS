@@ -186,4 +186,17 @@ public class CModelos {
         System.out.println(consulta);
         return mngr.actualizar(consulta);
     }
+
+    //-------------------------------------------------------------------------------------
+    public String busca_nombre_usuario(String nombreUsuario) throws SQLException {
+        consulta = "SELECT CONCAT(nombre, ' ', ap_Pat, ' ', ap_Mat) AS nombre_completo FROM usuario INNER JOIN ba_us_cu ON usuario.id_usuario = ba_us_cu.id_usuario WHERE usuario.nombre = '"
+                + nombreUsuario + "';";
+        return mngr.buscarValor(consulta);
+    }
+
+    public String busca_nombre_cuenta(String nombreUsuario) throws SQLException {
+        consulta = "SELECT cuenta.numdecuenta FROM cuenta INNER JOIN ba_us_cu ON cuenta.id_cuenta = ba_us_cu.id_cuenta INNER JOIN usuario ON ba_us_cu.id_usuario = usuario.id_usuario WHERE usuario.nombre = '"
+                + nombreUsuario + "';";
+        return mngr.buscarValor(consulta);
+    }
 }

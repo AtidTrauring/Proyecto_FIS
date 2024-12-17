@@ -256,7 +256,16 @@ public class JFInicio extends javax.swing.JFrame {
     //<editor-fold defaultstate="collapsed" desc="BOTONES">
     private void jBingEfectivoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBingEfectivoActionPerformed
         JFIngresarDinero ingresarDinero = new JFIngresarDinero(); //Se crea un objeto IngresarDinero
-        ingresarDinero.asignaUsuario(usuario);
+        try {
+            ingresarDinero.asignaUsuario(usuario);
+        } catch (SQLException ex) {
+            Logger.getLogger(JFInicio.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        try {
+            ingresarDinero.asignaCuenta(usuario);
+        } catch (SQLException ex) {
+            Logger.getLogger(JFInicio.class.getName()).log(Level.SEVERE, null, ex);
+        }
         ingresarDinero.setVisible(true);
     }//GEN-LAST:event_jBingEfectivoActionPerformed
 
@@ -282,8 +291,8 @@ public class JFInicio extends javax.swing.JFrame {
     }//GEN-LAST:event_jBBancosActionPerformed
 
     private void jBSolcreditoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBSolcreditoActionPerformed
-        jfCredito jfCredito = new jfCredito();
-        jfCredito.setVisible(true);
+        /*jfCredito jfCredito = new jfCredito();
+        jfCredito.setVisible(true);*/
     }//GEN-LAST:event_jBSolcreditoActionPerformed
 
     private void jBCerrarSesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBCerrarSesionActionPerformed
