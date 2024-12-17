@@ -161,7 +161,7 @@ public class CModelos {
     }
 
     public ArrayList<String[]> mostrarsaldo(String valor) throws SQLException {
-        consulta = "SELECT c.saldo FROM ba_us_cu bc INNER JOIN usuario u ON bc.id_usuario = u.id_usuario INNER JOIN cuenta c ON bc.id_cuenta = c.id_cuenta INNER JOIN registro r ON r.id_usuario = u.id_usuario WHERE u.id_usuario = '" + valor + "'";
+        consulta = "SELECT c.saldo FROM ba_us_cu bc INNER JOIN usuario u ON bc.id_usuario = u.id_usuario INNER JOIN cuenta c ON bc.id_cuenta = c.id_cuenta INNER JOIN registro r ON r.id_usuario = u.id_usuario WHERE r.id_usuario = '" + valor + "'";
         return mngr.busquedas(consulta);
     }
 
@@ -189,7 +189,7 @@ public class CModelos {
 
     //-------------------------------------------------------------------------------------
     public String busca_nombre_usuario(String nombreUsuario) throws SQLException {
-        consulta = "SELECT CONCAT(nombre, ' ', ap_Pat, ' ', ap_Mat) AS nombre_completo FROM usuario INNER JOIN ba_us_cu ON usuario.id_usuario = ba_us_cu.id_usuario WHERE usuario.nombre = '"
+        consulta = "SELECT CONCAT(nombre, ' ', ap_Pat, ' ', ap_Mat) AS nombre_completo FROM usuario INNER JOIN ba_us_cu ON usuario.id_usuario = ba_us_cu.id_usuario INNER JOIN registro on registro.id_usuario = usuario.id_usuario WHERE registro.usuario = '"
                 + nombreUsuario + "';";
         return mngr.buscarValor(consulta);
     }

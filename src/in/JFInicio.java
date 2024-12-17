@@ -29,7 +29,7 @@ public class JFInicio extends javax.swing.JFrame {
     }
 
     public void setSaludo(String nombre) {
-        jLSaludo.setText("¡Hola, " + nombre + "!");
+        jLSaludo.setText(nombre);
     }
 
     public void asignanombre(String nombre) {
@@ -357,8 +357,8 @@ public class JFInicio extends javax.swing.JFrame {
     }//GEN-LAST:event_JBTransferirActionPerformed
 
     private void jBSacarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBSacarActionPerformed
-        /*JFSacar jfSacarDinero = new JFSacar();
-        jfSacarDinero.setVisible(true);*/
+        JFSacar jfSacarDinero = new JFSacar();
+        jfSacarDinero.setVisible(true);
     }//GEN-LAST:event_jBSacarActionPerformed
 
     private void jBBancosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBBancosActionPerformed
@@ -368,8 +368,8 @@ public class JFInicio extends javax.swing.JFrame {
     }//GEN-LAST:event_jBBancosActionPerformed
 
     private void jBSolcreditoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBSolcreditoActionPerformed
-        /*jfCredito jfCredito = new jfCredito();
-        jfCredito.setVisible(true);*/
+        jfCredito jfCredito = new jfCredito();
+        jfCredito.setVisible(true);
     }//GEN-LAST:event_jBSolcreditoActionPerformed
 
     private void jBCerrarSesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBCerrarSesionActionPerformed

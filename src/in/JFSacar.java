@@ -246,8 +246,8 @@ public class JFSacar extends javax.swing.JFrame {
         JFInicio in = new JFInicio();
         this.setVisible(false);
         in.setVisible(true);
-        String datosaldo = jlnuevosaldo.getText();
-        in.setNuevoSaldo(datosaldo);
+//        String datosaldo = jlnuevosaldo.getText();
+//        in.setNuevoSaldo(datosaldo);
     }//GEN-LAST:event_jBVolverInicioIngresarActionPerformed
 
     /**

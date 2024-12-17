@@ -476,13 +476,15 @@ public class jfCredito extends javax.swing.JFrame {
                         results = cm.mostrarmonto(idus);
                         String monto = results.get(0)[0];
                         jlm.setText("Monto : " + monto);
-                        //this.setVisible(false);
+                        JFInicio in = new JFInicio();
+                        this.setVisible(false);
+                        in.setVisible(true);
+                    } else {
+                        cmensajes.message("Continua", "Nuevo crédito");
                         jtftelefonolocal.setEnabled(true);
                         jtfcelular.setEnabled(true);
                         jrbdeudasi.setEnabled(true);
                         jrbdeudano.setEnabled(true);
-                    } else {
-                        cmensajes.message("Continua", "Nuevo crédito");
                     }
                 }
             } else {
