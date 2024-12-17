@@ -310,8 +310,8 @@ public class JFInicio extends javax.swing.JFrame {
                 .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jBCerrarSesion)
-                    .addComponent(jlsaldonuevo))
+                    .addComponent(jlsaldonuevo)
+                    .addComponent(jBCerrarSesion))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -373,6 +373,8 @@ public class JFInicio extends javax.swing.JFrame {
     }//GEN-LAST:event_jBSolcreditoActionPerformed
 
     private void jBCerrarSesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBCerrarSesionActionPerformed
+        JfP inicio = new JfP();
+        inicio.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jBCerrarSesionActionPerformed
     // </editor-fold> 

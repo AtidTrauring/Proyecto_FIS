@@ -195,8 +195,8 @@ public class CModelos {
     }
 
     public String busca_nombre_cuenta(String nombreUsuario) throws SQLException {
-        consulta = "SELECT cuenta.numdecuenta FROM cuenta INNER JOIN ba_us_cu ON cuenta.id_cuenta = ba_us_cu.id_cuenta INNER JOIN usuario ON ba_us_cu.id_usuario = usuario.id_usuario WHERE usuario.nombre = '"
-                + nombreUsuario + "';";
+        consulta = "SELECT cuenta.numdecuenta FROM cuenta INNER JOIN ba_us_cu ON cuenta.id_cuenta = ba_us_cu.id_cuenta INNER JOIN registro ON ba_us_cu.id_usuario = registro.id_usuario WHERE registro.usuario = '" +
+                nombreUsuario + "';";
         return mngr.buscarValor(consulta);
     }
     

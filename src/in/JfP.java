@@ -126,6 +126,7 @@ public class JfP extends javax.swing.JFrame {
 
     private void JbtnIniciarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JbtnIniciarActionPerformed
         generarFrameIS();
+        this.dispose();
     }//GEN-LAST:event_JbtnIniciarActionPerformed
 
     private void JbtnRegistrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JbtnRegistrarActionPerformed
