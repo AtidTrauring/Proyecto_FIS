@@ -172,7 +172,8 @@ public class JFInicioSesion extends javax.swing.JFrame {
                     JFInicio ventanaInicio = new JFInicio();
                     ventanaInicio.setSaludo(nombre);
                     ventanaInicio.asignanombre(nombre);
-                    ventanaInicio.setSize(275, 415);
+                    ventanaInicio.mostrarID(nombre);
+                    ventanaInicio.setSize(310, 415);
                     ventanaInicio.mostrarSaldo(nombre);
                     ventanaInicio.setVisible(true);
                     this.dispose(); // Cierra la ventana actual

@@ -41,10 +41,26 @@ public class JFInicio extends javax.swing.JFrame {
             if (saldoBuscado != null) {
                 jLSaldo.setText("$ " + saldoBuscado);
             } else {
-                jLSaldo.setText("Saldo no encontrado");
+                jLSaldo.setText("$0");
             }
         } catch (SQLException e) {
             cmensajes.mistake("Error al buscar el saldo", "Saldo_Inicio");
+        }
+    }
+    
+    public void mostrarID(String nombreUsuario) {
+        String IDBuscado;
+        try {
+            System.out.println("Nombre de usuario recibido: " + nombreUsuario);
+            IDBuscado = modelo.busca_ID(nombreUsuario);
+            System.out.println("ID buscado: " + IDBuscado);
+            if (IDBuscado != null) {
+                jLID.setText("ID de usuario: " + IDBuscado);
+            } else {
+                jLSaldo.setText("ID no encontrado");
+            }
+        } catch (SQLException e) {
+            cmensajes.mistake("Error al buscar el ID", "Saldo_Inicio");
         }
     }
 
@@ -64,6 +80,7 @@ public class JFInicio extends javax.swing.JFrame {
         jPanel4 = new javax.swing.JPanel();
         jBSolcredito = new javax.swing.JButton();
         jBCerrarSesion = new javax.swing.JButton();
+        jLID = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Menu Principal");
@@ -203,6 +220,10 @@ public class JFInicio extends javax.swing.JFrame {
             }
         });
 
+        jLID.setFont(new java.awt.Font("Dubai", 0, 12)); // NOI18N
+        jLID.setForeground(new java.awt.Color(204, 255, 255));
+        jLID.setText("ID");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -214,20 +235,26 @@ public class JFInicio extends javax.swing.JFrame {
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(jBCerrarSesion))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(jPanel2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jPanel4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLSaludo, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jPanel3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(jPanel2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jPanel4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jPanel3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
+                                    .addComponent(jLID)
+                                    .addGap(219, 219, 219)))
+                            .addComponent(jLSaludo))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(30, 30, 30)
+                .addContainerGap()
                 .addComponent(jLSaludo)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLID, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -280,8 +307,8 @@ public class JFInicio extends javax.swing.JFrame {
     }//GEN-LAST:event_JBTransferirActionPerformed
 
     private void jBSacarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBSacarActionPerformed
-        JFSacar jfSacarDinero = new JFSacar();
-        jfSacarDinero.setVisible(true);
+        /*JFSacar jfSacarDinero = new JFSacar();
+        jfSacarDinero.setVisible(true);*/
     }//GEN-LAST:event_jBSacarActionPerformed
 
     private void jBBancosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBBancosActionPerformed
@@ -340,6 +367,7 @@ public class JFInicio extends javax.swing.JFrame {
     private javax.swing.JButton jBSacar;
     private javax.swing.JButton jBSolcredito;
     private javax.swing.JButton jBingEfectivo;
+    private javax.swing.JLabel jLID;
     private javax.swing.JLabel jLSaldo;
     private javax.swing.JLabel jLSaludo;
     private javax.swing.JPanel jPanel1;

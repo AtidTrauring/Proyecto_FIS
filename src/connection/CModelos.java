@@ -199,4 +199,10 @@ public class CModelos {
                 + nombreUsuario + "';";
         return mngr.buscarValor(consulta);
     }
+    
+    public String busca_ID(String nombreUsuario) throws SQLException {
+        consulta = "SELECT u1.id_usuario FROM usuario u1 INNER JOIN ba_us_cu ON u1.id_usuario = ba_us_cu.id_usuario INNER JOIN usuario u2 ON ba_us_cu.id_usuario = u2.id_usuario WHERE u2.nombre = '" +
+                nombreUsuario + "';";
+        return mngr.buscarValor(consulta);
+    }
 }
